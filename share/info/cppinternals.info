@@ -1,4 +1,4 @@
-This is cppinternals.info, produced by makeinfo version 5.1 from
+This is cppinternals.info, produced by makeinfo version 6.7 from
 cppinternals.texi.
 
 INFO-DIR-SECTION Software development
@@ -28,6 +28,18 @@ File: cppinternals.info,  Node: Top,  Next: Conventions,  Up: (dir)
 
 The GNU C Preprocessor Internals
 ********************************
+
+* Menu:
+
+* Conventions::
+* Lexer::
+* Hash Nodes::
+* Macro Expansion::
+* Token Spacing::
+* Line Numbering::
+* Guard Macros::
+* Files::
+* Concept Index::
 
 1 Cpplib--the GNU C Preprocessor
 ********************************
@@ -125,7 +137,7 @@ will be removed, so I'll not discuss it further here.
    The job of '_cpp_lex_direct' is simply to lex a token.  It is not
 responsible for issues like directive handling, returning lookahead
 tokens directly, multiple-include optimization, or conditional block
-skipping.  It necessarily has a minor ro^le to play in memory management
+skipping.  It necessarily has a minor rôle to play in memory management
 of lexed lines.  I discuss these issues in a separate section (*note
 Lexing a line::).
 
@@ -1014,16 +1026,21 @@ Concept Index
 
 Tag Table:
 Node: Top905
-Node: Conventions2590
-Node: Lexer3532
-Ref: Invalid identifiers11447
-Ref: Lexing a line13397
-Node: Hash Nodes18166
-Node: Macro Expansion21045
-Node: Token Spacing29989
-Node: Line Numbering35845
-Node: Guard Macros39931
-Node: Files44722
-Node: Concept Index48189
+Node: Conventions2743
+Node: Lexer3685
+Ref: Invalid identifiers11600
+Ref: Lexing a line13550
+Node: Hash Nodes18319
+Node: Macro Expansion21198
+Node: Token Spacing30142
+Node: Line Numbering35998
+Node: Guard Macros40084
+Node: Files44875
+Node: Concept Index48342
 
 End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:

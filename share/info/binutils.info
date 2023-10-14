@@ -1,4 +1,4 @@
-This is binutils.info, produced by makeinfo version 5.1 from
+This is binutils.info, produced by makeinfo version 6.7 from
 binutils.texi.
 
 Copyright (C) 1991-2023 Free Software Foundation, Inc.
@@ -42,7 +42,7 @@ Introduction
 ************
 
 This brief manual contains documentation for the GNU binary utilities
-(Arm GNU Toolchain 12.3.Rel1 (Build arm-12.35)) version 2.40.0:
+(Linaro_Binutils-2023.06) version 2.40.0:
 
    This document is distributed under the terms of the GNU Free
 Documentation License version 1.3.  A copy of the license is included in
@@ -5325,7 +5325,7 @@ recommend you contact that organization first.
 individuals in the file 'etc/SERVICE' in the GNU Emacs distribution.
 
    In any event, we also recommend that you send bug reports for the
-binary utilities to <https://bugs.linaro.org/>.
+binary utilities to <https://sourceware.org/bugzilla/>.
 
    The fundamental principle of reporting bugs usefully is this: *report
 all the facts*.  If you are not sure whether to state a fact or leave it
@@ -5964,7 +5964,7 @@ Binutils Index
 * address to file name and line number:  addr2line.           (line   6)
 * all header information, object file:   objdump.             (line 924)
 * ar:                                    ar.                  (line   6)
-* 'ar' compatibility:                    ar.                  (line  63)
+* ar compatibility:                      ar.                  (line  63)
 * architecture:                          objdump.             (line 273)
 * architectures available:               objdump.             (line 251)
 * archive contents:                      ranlib.              (line   6)
@@ -5985,7 +5985,7 @@ Binutils Index
 * collections of files:                  ar.                  (line   6)
 * Compact Type Format:                   objdump.             (line 757)
 * Compact Type Format <1>:               readelf.             (line 457)
-* compatibility, 'ar':                   ar.                  (line  63)
+* compatibility, ar:                     ar.                  (line  63)
 * contents of archive:                   ar cmdline.          (line  97)
 * crash:                                 Bug Criteria.        (line   9)
 * creating archives:                     ar cmdline.          (line 144)
@@ -6053,14 +6053,14 @@ Binutils Index
 * LTO symbol table:                      readelf.             (line 125)
 * machine instructions:                  objdump.             (line 153)
 * moving in archive:                     ar cmdline.          (line  34)
-* MRI compatibility, 'ar':               ar scripts.          (line   8)
+* MRI compatibility, ar:                 ar scripts.          (line   8)
 * name duplication in archive:           ar cmdline.          (line 108)
 * name length:                           ar.                  (line  18)
 * nm:                                    nm.                  (line   6)
-* 'nm' compatibility:                    nm.                  (line 193)
-* 'nm' compatibility <1>:                nm.                  (line 233)
-* 'nm' format:                           nm.                  (line 193)
-* 'nm' format <1>:                       nm.                  (line 233)
+* nm compatibility:                      nm.                  (line 193)
+* nm compatibility <1>:                  nm.                  (line 233)
+* nm format:                             nm.                  (line 193)
+* nm format <1>:                         nm.                  (line 233)
 * not writing archive index:             ar cmdline.          (line 217)
 * objdump:                               objdump.             (line   6)
 * objdump inlines:                       nm.                  (line 267)
@@ -6092,7 +6092,7 @@ Binutils Index
 * repeated names in archive:             ar cmdline.          (line 108)
 * replacement in archive:                ar cmdline.          (line  73)
 * reporting bugs:                        Reporting Bugs.      (line   6)
-* scripts, 'ar':                         ar scripts.          (line   8)
+* scripts, ar:                           ar scripts.          (line   8)
 * section addresses in objdump:          objdump.             (line  90)
 * section headers:                       objdump.             (line 228)
 * section information:                   objdump.             (line 256)
@@ -6101,8 +6101,8 @@ Binutils Index
 * separate debug files:                  debuginfod.          (line   6)
 * SFrame:                                objdump.             (line 778)
 * size:                                  size.                (line   6)
-* 'size' display format:                 size.                (line  29)
-* 'size' number format:                  size.                (line  89)
+* size display format:                   size.                (line  29)
+* size number format:                    size.                (line  89)
 * sorting symbols:                       nm.                  (line 282)
 * source code context:                   objdump.             (line 221)
 * source disassembly:                    objdump.             (line 516)
@@ -6127,7 +6127,7 @@ Binutils Index
 * thin archives:                         ar.                  (line  43)
 * undefined symbols:                     nm.                  (line 315)
 * undefined symbols <1>:                 nm.                  (line 321)
-* Unix compatibility, 'ar':              ar cmdline.          (line   8)
+* Unix compatibility, ar:                ar cmdline.          (line   8)
 * unwind information:                    readelf.             (line 204)
 * Update ELF header:                     elfedit.             (line   6)
 * updating an archive:                   ar cmdline.          (line 229)
@@ -6140,34 +6140,39 @@ Binutils Index
 
 Tag Table:
 Node: Top1834
-Node: ar3603
-Node: ar cmdline6937
-Node: ar scripts20253
-Node: nm25939
-Node: objcopy41616
-Node: objdump82561
-Node: ranlib120270
-Node: size121869
-Node: strings126013
-Node: strip131848
-Node: c++filt141690
-Ref: c++filt-Footnote-1147551
-Node: addr2line147657
-Node: windmc153612
-Node: windres157271
-Node: dlltool163841
-Node: def file format177294
-Node: readelf179824
-Node: elfedit198955
-Node: Common Options202381
-Node: Selecting the Target System203415
-Node: Target Selection204343
-Node: Architecture Selection206324
-Node: debuginfod207152
-Node: Reporting Bugs208154
-Node: Bug Criteria208916
-Node: Bug Reporting209469
-Node: GNU Free Documentation License216328
-Node: Binutils Index241487
+Node: ar3581
+Node: ar cmdline6915
+Node: ar scripts20231
+Node: nm25917
+Node: objcopy41594
+Node: objdump82539
+Node: ranlib120248
+Node: size121847
+Node: strings125991
+Node: strip131826
+Node: c++filt141668
+Ref: c++filt-Footnote-1147529
+Node: addr2line147635
+Node: windmc153590
+Node: windres157249
+Node: dlltool163819
+Node: def file format177272
+Node: readelf179802
+Node: elfedit198933
+Node: Common Options202359
+Node: Selecting the Target System203393
+Node: Target Selection204321
+Node: Architecture Selection206302
+Node: debuginfod207130
+Node: Reporting Bugs208132
+Node: Bug Criteria208894
+Node: Bug Reporting209447
+Node: GNU Free Documentation License216314
+Node: Binutils Index241474
 
 End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:

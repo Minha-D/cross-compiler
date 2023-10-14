@@ -9,8 +9,9 @@ with no Invariant Sections, with no Front-Cover Texts, and with no
 Back-Cover Texts.  A copy of the license is included in the
 section entitled "GNU Free Documentation License".
  -->
-<!-- Created by GNU Texinfo 5.1, http://www.gnu.org/software/texinfo/ -->
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>GNU Binary Utilities</title>
 
 <meta name="description" content="GNU Binary Utilities">
@@ -18,36 +19,24 @@ section entitled "GNU Free Documentation License".
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="#Top" rel="start" title="Top">
 <link href="#Binutils-Index" rel="index" title="Binutils Index">
 <link href="#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="dir.html#Top" rel="up" title="(dir)">
 <style type="text/css">
 <!--
 a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
+blockquote.indentedblock {margin-right: 0em}
 div.display {margin-left: 3.2em}
 div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
 div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
+kbd {font-style: oblique}
 pre.display {font-family: inherit}
 pre.format {font-family: inherit}
 pre.menu-comment {font-family: serif}
 pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
 ul.no-bullet {list-style: none}
 -->
 </style>
@@ -55,71 +44,69 @@ ul.no-bullet {list-style: none}
 
 </head>
 
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en">
 <h1 class="settitle" align="center"><small>GNU</small> Binary Utilities</h1>
 
 
 
 
 
-<a name="SEC_Contents"></a>
+<span id="SEC_Contents"></span>
 <h2 class="contents-heading">Table of Contents</h2>
 
 <div class="contents">
 
 <ul class="no-bullet">
-  <li><a name="toc-ar-1" href="#ar">1 ar</a>
+  <li><a id="toc-ar-1" href="#ar">1 ar</a>
   <ul class="no-bullet">
-    <li><a name="toc-Controlling-ar-on-the-Command-Line" href="#ar-cmdline">1.1 Controlling <code>ar</code> on the Command Line</a></li>
-    <li><a name="toc-Controlling-ar-with-a-Script" href="#ar-scripts">1.2 Controlling <code>ar</code> with a Script</a></li>
+    <li><a id="toc-Controlling-ar-on-the-Command-Line" href="#ar-cmdline">1.1 Controlling <code>ar</code> on the Command Line</a></li>
+    <li><a id="toc-Controlling-ar-with-a-Script" href="#ar-scripts">1.2 Controlling <code>ar</code> with a Script</a></li>
   </ul></li>
-  <li><a name="toc-nm-1" href="#nm">2 nm</a></li>
-  <li><a name="toc-objcopy-1" href="#objcopy">3 objcopy</a></li>
-  <li><a name="toc-objdump-1" href="#objdump">4 objdump</a></li>
-  <li><a name="toc-ranlib-1" href="#ranlib">5 ranlib</a></li>
-  <li><a name="toc-size-1" href="#size">6 size</a></li>
-  <li><a name="toc-strings-1" href="#strings">7 strings</a></li>
-  <li><a name="toc-strip-1" href="#strip">8 strip</a></li>
-  <li><a name="toc-c_002b_002bfilt-1" href="#c_002b_002bfilt">9 c++filt</a></li>
-  <li><a name="toc-addr2line-1" href="#addr2line">10 addr2line</a></li>
-  <li><a name="toc-windmc-1" href="#windmc">11 windmc</a></li>
-  <li><a name="toc-windres-1" href="#windres">12 windres</a></li>
-  <li><a name="toc-dlltool-1" href="#dlltool">13 dlltool</a>
+  <li><a id="toc-nm-1" href="#nm">2 nm</a></li>
+  <li><a id="toc-objcopy-1" href="#objcopy">3 objcopy</a></li>
+  <li><a id="toc-objdump-1" href="#objdump">4 objdump</a></li>
+  <li><a id="toc-ranlib-1" href="#ranlib">5 ranlib</a></li>
+  <li><a id="toc-size-1" href="#size">6 size</a></li>
+  <li><a id="toc-strings-1" href="#strings">7 strings</a></li>
+  <li><a id="toc-strip-1" href="#strip">8 strip</a></li>
+  <li><a id="toc-c_002b_002bfilt-1" href="#c_002b_002bfilt">9 c++filt</a></li>
+  <li><a id="toc-addr2line-1" href="#addr2line">10 addr2line</a></li>
+  <li><a id="toc-windmc-1" href="#windmc">11 windmc</a></li>
+  <li><a id="toc-windres-1" href="#windres">12 windres</a></li>
+  <li><a id="toc-dlltool-1" href="#dlltool">13 dlltool</a>
   <ul class="no-bullet">
-    <li><a name="toc-The-format-of-the-dlltool-_002edef-file" href="#def-file-format">13.1 The format of the <code>dlltool</code> <samp>.def</samp> file</a></li>
+    <li><a id="toc-The-format-of-the-dlltool-_002edef-file" href="#def-file-format">13.1 The format of the <code>dlltool</code> <samp>.def</samp> file</a></li>
   </ul></li>
-  <li><a name="toc-readelf-1" href="#readelf">14 readelf</a></li>
-  <li><a name="toc-elfedit-1" href="#elfedit">15 elfedit</a></li>
-  <li><a name="toc-Common-Options-1" href="#Common-Options">16 Common Options</a></li>
-  <li><a name="toc-Selecting-the-Target-System-1" href="#Selecting-the-Target-System">17 Selecting the Target System</a>
+  <li><a id="toc-readelf-1" href="#readelf">14 readelf</a></li>
+  <li><a id="toc-elfedit-1" href="#elfedit">15 elfedit</a></li>
+  <li><a id="toc-Common-Options-1" href="#Common-Options">16 Common Options</a></li>
+  <li><a id="toc-Selecting-the-Target-System-1" href="#Selecting-the-Target-System">17 Selecting the Target System</a>
   <ul class="no-bullet">
-    <li><a name="toc-Target-Selection-1" href="#Target-Selection">17.1 Target Selection</a></li>
-    <li><a name="toc-Architecture-Selection-1" href="#Architecture-Selection">17.2 Architecture Selection</a></li>
+    <li><a id="toc-Target-Selection-1" href="#Target-Selection">17.1 Target Selection</a></li>
+    <li><a id="toc-Architecture-Selection-1" href="#Architecture-Selection">17.2 Architecture Selection</a></li>
   </ul></li>
-  <li><a name="toc-debuginfod-1" href="#debuginfod">18 debuginfod</a></li>
-  <li><a name="toc-Reporting-Bugs-1" href="#Reporting-Bugs">19 Reporting Bugs</a>
+  <li><a id="toc-debuginfod-1" href="#debuginfod">18 debuginfod</a></li>
+  <li><a id="toc-Reporting-Bugs-1" href="#Reporting-Bugs">19 Reporting Bugs</a>
   <ul class="no-bullet">
-    <li><a name="toc-Have-You-Found-a-Bug_003f" href="#Bug-Criteria">19.1 Have You Found a Bug?</a></li>
-    <li><a name="toc-How-to-Report-Bugs" href="#Bug-Reporting">19.2 How to Report Bugs</a></li>
+    <li><a id="toc-Have-You-Found-a-Bug_003f" href="#Bug-Criteria">19.1 Have You Found a Bug?</a></li>
+    <li><a id="toc-How-to-Report-Bugs" href="#Bug-Reporting">19.2 How to Report Bugs</a></li>
   </ul></li>
-  <li><a name="toc-GNU-Free-Documentation-License-1" href="#GNU-Free-Documentation-License">Appendix A GNU Free Documentation License</a></li>
-  <li><a name="toc-Binutils-Index-1" href="#Binutils-Index">Binutils Index</a></li>
+  <li><a id="toc-GNU-Free-Documentation-License-1" href="#GNU-Free-Documentation-License">Appendix A GNU Free Documentation License</a></li>
+  <li><a id="toc-Binutils-Index-1" href="#Binutils-Index" rel="index">Binutils Index</a></li>
 </ul>
 </div>
 
 
-<a name="Top"></a>
-<div class="header">
+<span id="Top"></span><div class="header">
 <p>
-Next: <a href="#ar" accesskey="n" rel="next">ar</a>, Up: <a href="dir.html#Top" accesskey="u" rel="up">(dir)</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#ar" accesskey="n" rel="next">ar</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="Introduction"></a>
-<h1 class="top">Introduction</h1>
+<span id="Introduction"></span><h1 class="top">Introduction</h1>
 
-<a name="index-version"></a>
+<span id="index-version"></span>
 <p>This brief manual contains documentation for the <small>GNU</small> binary
 utilities
-(Arm GNU Toolchain 12.3.Rel1 (Build arm-12.35))
+(Linaro_Binutils-2023.06)
 version 2.40.0:
 </p>
 
@@ -128,68 +115,66 @@ Documentation License version 1.3.  A copy of the license is included
 in the section entitled &ldquo;GNU Free Documentation License&rdquo;.
 </p>
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="#ar" accesskey="1">ar</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Create, modify, and extract from archives
+<tr><td align="left" valign="top">&bull; <a href="#ar" accesskey="1">ar</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Create, modify, and extract from archives
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#nm" accesskey="2">nm</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">List symbols from object files
+<tr><td align="left" valign="top">&bull; <a href="#nm" accesskey="2">nm</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">List symbols from object files
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#objcopy" accesskey="3">objcopy</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Copy and translate object files
+<tr><td align="left" valign="top">&bull; <a href="#objcopy" accesskey="3">objcopy</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Copy and translate object files
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#objdump" accesskey="4">objdump</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Display information from object files
+<tr><td align="left" valign="top">&bull; <a href="#objdump" accesskey="4">objdump</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Display information from object files
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#ranlib" accesskey="5">ranlib</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Generate index to archive contents
+<tr><td align="left" valign="top">&bull; <a href="#ranlib" accesskey="5">ranlib</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Generate index to archive contents
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#size" accesskey="6">size</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">List section sizes and total size
+<tr><td align="left" valign="top">&bull; <a href="#size" accesskey="6">size</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">List section sizes and total size
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#strings" accesskey="7">strings</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">List printable strings from files
+<tr><td align="left" valign="top">&bull; <a href="#strings" accesskey="7">strings</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">List printable strings from files
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#strip" accesskey="8">strip</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Discard symbols
+<tr><td align="left" valign="top">&bull; <a href="#strip" accesskey="8">strip</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Discard symbols
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#c_002b_002bfilt" accesskey="9">c++filt</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Filter to demangle encoded C++ symbols
+<tr><td align="left" valign="top">&bull; <a href="#c_002b_002bfilt" accesskey="9">c++filt</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Filter to demangle encoded C++ symbols
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#c_002b_002bfilt">cxxfilt</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">MS-DOS name for c++filt
+<tr><td align="left" valign="top">&bull; <a href="#c_002b_002bfilt">cxxfilt</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">MS-DOS name for c++filt
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#addr2line">addr2line</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Convert addresses or symbol+offset to file and line
+<tr><td align="left" valign="top">&bull; <a href="#addr2line">addr2line</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Convert addresses or symbol+offset to file and line
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#windmc">windmc</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Generator for Windows message resources
+<tr><td align="left" valign="top">&bull; <a href="#windmc">windmc</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Generator for Windows message resources
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#windres">windres</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Manipulate Windows resources
+<tr><td align="left" valign="top">&bull; <a href="#windres">windres</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Manipulate Windows resources
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#dlltool">dlltool</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Create files needed to build and use DLLs
+<tr><td align="left" valign="top">&bull; <a href="#dlltool">dlltool</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Create files needed to build and use DLLs
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#readelf">readelf</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Display the contents of ELF format files
+<tr><td align="left" valign="top">&bull; <a href="#readelf">readelf</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Display the contents of ELF format files
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#elfedit">elfedit</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Update ELF header and property of ELF files
+<tr><td align="left" valign="top">&bull; <a href="#elfedit">elfedit</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Update ELF header and property of ELF files
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#Common-Options">Common Options</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Command-line options for all utilities
+<tr><td align="left" valign="top">&bull; <a href="#Common-Options">Common Options</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Command-line options for all utilities
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#Selecting-the-Target-System">Selecting the Target System</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">How these utilities determine the target
+<tr><td align="left" valign="top">&bull; <a href="#Selecting-the-Target-System">Selecting the Target System</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">How these utilities determine the target
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#debuginfod">debuginfod</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Using binutils with debuginfod
+<tr><td align="left" valign="top">&bull; <a href="#debuginfod">debuginfod</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Using binutils with debuginfod
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#Reporting-Bugs">Reporting Bugs</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Reporting Bugs
+<tr><td align="left" valign="top">&bull; <a href="#Reporting-Bugs">Reporting Bugs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Reporting Bugs
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#GNU-Free-Documentation-License">GNU Free Documentation License</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">GNU Free Documentation License
+<tr><td align="left" valign="top">&bull; <a href="#GNU-Free-Documentation-License">GNU Free Documentation License</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">GNU Free Documentation License
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#Binutils-Index">Binutils Index</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Binutils Index
+<tr><td align="left" valign="top">&bull; <a href="#Binutils-Index" rel="index">Binutils Index</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Binutils Index
 </td></tr>
 </table>
 
 <hr>
-<a name="ar"></a>
-<div class="header">
+<span id="ar"></span><div class="header">
 <p>
-Next: <a href="#nm" accesskey="n" rel="next">nm</a>, Previous: <a href="#Top" accesskey="p" rel="previous">Top</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#nm" accesskey="n" rel="next">nm</a>, Previous: <a href="#Top" accesskey="p" rel="prev">Top</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="ar-1"></a>
-<h2 class="chapter">1 ar</h2>
+<span id="ar-1"></span><h2 class="chapter">1 ar</h2>
 
-<a name="index-ar"></a>
-<a name="index-archives"></a>
-<a name="index-collections-of-files"></a>
+<span id="index-ar"></span>
+<span id="index-archives"></span>
+<span id="index-collections-of-files"></span>
 
 
-<div class="smallexample">
-<pre class="smallexample">ar [-]<var>p</var>[<var>mod</var>] [<samp>--plugin</samp> <var>name</var>] [<samp>--target</samp> <var>bfdname</var>] [<samp>--output</samp> <var>dirname</var>] [<samp>--record-libdeps</samp> <var>libdeps</var>] [<var>relpos</var>] [<var>count</var>] <var>archive</var> [<var>member</var>&hellip;]
+<div class="example">
+<pre class="example">ar [-]<var>p</var>[<var>mod</var>] [<samp>--plugin</samp> <var>name</var>] [<samp>--target</samp> <var>bfdname</var>] [<samp>--output</samp> <var>dirname</var>] [<samp>--record-libdeps</samp> <var>libdeps</var>] [<var>relpos</var>] [<var>count</var>] <var>archive</var> [<var>member</var>&hellip;]
 ar -M [ &lt;mri-script ]
 </pre></div>
 
@@ -203,7 +188,7 @@ the original individual files (called <em>members</em> of the archive).
 group are preserved in the archive, and can be restored on
 extraction.
 </p>
-<a name="index-name-length"></a>
+<span id="index-name-length"></span>
 <p><small>GNU</small> <code>ar</code> can maintain archives whose members have names of any
 length; however, depending on how <code>ar</code> is configured on your
 system, a limit on member-name length may be imposed for compatibility
@@ -211,14 +196,14 @@ with archive formats maintained with other tools.  If it exists, the
 limit is often 15 characters (typical of formats related to a.out) or 16
 characters (typical of formats related to coff).
 </p>
-<a name="index-libraries"></a>
+<span id="index-libraries"></span>
 <p><code>ar</code> is considered a binary utility because archives of this sort
 are most often used as <em>libraries</em> holding commonly needed
 subroutines.  Since libraries often will depend on other libraries,
 <code>ar</code> can also record the dependencies of a library when the
 <samp>--record-libdeps</samp> option is specified.
 </p>
-<a name="index-symbol-index"></a>
+<span id="index-symbol-index"></span>
 <p><code>ar</code> creates an index to the symbols defined in relocatable
 object modules in the archive when you specify the modifier &lsquo;<samp>s</samp>&rsquo;.
 Once created, this index is updated in the archive whenever <code>ar</code>
@@ -231,7 +216,7 @@ their placement in the archive.
 table.  If an archive lacks the table, another form of <code>ar</code> called
 <code>ranlib</code> can be used to add just the table.
 </p>
-<a name="index-thin-archives"></a>
+<span id="index-thin-archives"></span>
 <p><small>GNU</small> <code>ar</code> can optionally create a <em>thin</em> archive,
 which contains a symbol index and references to the original copies
 of the member files of the archive.  This is useful for building
@@ -252,8 +237,8 @@ individually to the second archive.
 <p>The paths to the elements of the archive are stored relative to the
 archive itself.
 </p>
-<a name="index-compatibility_002c-ar"></a>
-<a name="index-ar-compatibility"></a>
+<span id="index-compatibility_002c-ar"></span>
+<span id="index-ar-compatibility"></span>
 <p><small>GNU</small> <code>ar</code> is designed to be compatible with two different
 facilities.  You can control its activity using command-line options,
 like the different varieties of <code>ar</code> on Unix systems; or, if you
@@ -263,26 +248,24 @@ program.
 </p>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="#ar-cmdline" accesskey="1">ar cmdline</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Controlling <code>ar</code> on the command line
+<tr><td align="left" valign="top">&bull; <a href="#ar-cmdline" accesskey="1">ar cmdline</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Controlling <code>ar</code> on the command line
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#ar-scripts" accesskey="2">ar scripts</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Controlling <code>ar</code> with a script
+<tr><td align="left" valign="top">&bull; <a href="#ar-scripts" accesskey="2">ar scripts</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Controlling <code>ar</code> with a script
 </td></tr>
 </table>
 
 <hr>
-<a name="ar-cmdline"></a>
-<div class="header">
+<span id="ar-cmdline"></span><div class="header">
 <p>
 Next: <a href="#ar-scripts" accesskey="n" rel="next">ar scripts</a>, Up: <a href="#ar" accesskey="u" rel="up">ar</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="Controlling-ar-on-the-Command-Line"></a>
-<h3 class="section">1.1 Controlling <code>ar</code> on the Command Line</h3>
+<span id="Controlling-ar-on-the-Command-Line"></span><h3 class="section">1.1 Controlling <code>ar</code> on the Command Line</h3>
 
-<div class="smallexample">
-<pre class="smallexample">ar [<samp>-X32_64</samp>] [<samp>-</samp>]<var>p</var>[<var>mod</var>] [<samp>--plugin</samp> <var>name</var>] [<samp>--target</samp> <var>bfdname</var>] [<samp>--output</samp> <var>dirname</var>] [<samp>--record-libdeps</samp> <var>libdeps</var>] [<samp>--thin</samp>] [<var>relpos</var>] [<var>count</var>] <var>archive</var> [<var>member</var>&hellip;]
+<div class="example">
+<pre class="example">ar [<samp>-X32_64</samp>] [<samp>-</samp>]<var>p</var>[<var>mod</var>] [<samp>--plugin</samp> <var>name</var>] [<samp>--target</samp> <var>bfdname</var>] [<samp>--output</samp> <var>dirname</var>] [<samp>--record-libdeps</samp> <var>libdeps</var>] [<samp>--thin</samp>] [<var>relpos</var>] [<var>count</var>] <var>archive</var> [<var>member</var>&hellip;]
 </pre></div>
 
-<a name="index-Unix-compatibility_002c-ar"></a>
+<span id="index-Unix-compatibility_002c-ar"></span>
 <p>When you use <code>ar</code> in the Unix style, <code>ar</code> insists on at least two
 arguments to execute: one keyletter specifying the <em>operation</em>
 (optionally accompanied by other keyletters specifying
@@ -298,13 +281,13 @@ flags <var>mod</var> in any order, within the first command-line argument.
 <p>If you wish, you may begin the first command-line argument with a
 dash.
 </p>
-<a name="index-operations-on-archive"></a>
+<span id="index-operations-on-archive"></span>
 <p>The <var>p</var> keyletter specifies what operation to execute; it may be
 any of the following, but you must specify only one of them:
 </p>
 <dl compact="compact">
 <dt>&lsquo;<samp>d</samp>&rsquo;</dt>
-<dd><a name="index-deleting-from-archive"></a>
+<dd><span id="index-deleting-from-archive"></span>
 <p><em>Delete</em> modules from the archive.  Specify the names of modules to
 be deleted as <var>member</var>&hellip;; the archive is untouched if you
 specify no files to delete.
@@ -314,7 +297,7 @@ as it is deleted.
 </p>
 </dd>
 <dt>&lsquo;<samp>m</samp>&rsquo;</dt>
-<dd><a name="index-moving-in-archive"></a>
+<dd><span id="index-moving-in-archive"></span>
 <p>Use this operation to <em>move</em> members in an archive.
 </p>
 <p>The ordering of members in an archive can make a difference in how
@@ -328,7 +311,7 @@ specified place instead.
 </p>
 </dd>
 <dt>&lsquo;<samp>p</samp>&rsquo;</dt>
-<dd><a name="index-printing-from-archive"></a>
+<dd><span id="index-printing-from-archive"></span>
 <p><em>Print</em> the specified members of the archive, to the standard
 output file.  If the &lsquo;<samp>v</samp>&rsquo; modifier is specified, show the member
 name before copying its contents to standard output.
@@ -338,7 +321,7 @@ printed.
 </p>
 </dd>
 <dt>&lsquo;<samp>q</samp>&rsquo;</dt>
-<dd><a name="index-quick-append-to-archive"></a>
+<dd><span id="index-quick-append-to-archive"></span>
 <p><em>Quick append</em>; Historically, add the files <var>member</var>&hellip; to the end of
 <var>archive</var>, without checking for replacement.
 </p>
@@ -359,7 +342,7 @@ archive and appending new ones at the end.
 </p>
 </dd>
 <dt>&lsquo;<samp>r</samp>&rsquo;</dt>
-<dd><a name="index-replacement-in-archive"></a>
+<dd><span id="index-replacement-in-archive"></span>
 <p>Insert the files <var>member</var>&hellip; into <var>archive</var> (with
 <em>replacement</em>). This operation differs from &lsquo;<samp>q</samp>&rsquo; in that any
 previously existing members are deleted if their names match those being
@@ -380,7 +363,7 @@ deleted) or replaced.
 </p>
 </dd>
 <dt>&lsquo;<samp>s</samp>&rsquo;</dt>
-<dd><a name="index-ranlib"></a>
+<dd><span id="index-ranlib"></span>
 <p>Add an index to the archive, or update it if it already exists.  Note
 this command is an exception to the rule that there can only be one
 command letter, as it is possible to use it as either a command or a
@@ -388,7 +371,7 @@ modifier.  In either case it does the same thing.
 </p>
 </dd>
 <dt>&lsquo;<samp>t</samp>&rsquo;</dt>
-<dd><a name="index-contents-of-archive"></a>
+<dd><span id="index-contents-of-archive"></span>
 <p>Display a <em>table</em> listing the contents of <var>archive</var>, or those
 of the files listed in <var>member</var>&hellip; that are present in the
 archive.  Normally only the member name is shown, but if the modifier
@@ -399,8 +382,8 @@ owner, group, and size the &lsquo;<samp>v</samp>&rsquo; modifier should be inclu
 <p>If you do not specify a <var>member</var>, all files in the archive
 are listed.
 </p>
-<a name="index-repeated-names-in-archive"></a>
-<a name="index-name-duplication-in-archive"></a>
+<span id="index-repeated-names-in-archive"></span>
+<span id="index-name-duplication-in-archive"></span>
 <p>If there is more than one file with the same name (say, &lsquo;<samp>fie</samp>&rsquo;) in
 an archive (say &lsquo;<samp>b.a</samp>&rsquo;), &lsquo;<samp>ar t b.a fie</samp>&rsquo; lists only the
 first instance; to see them all, you must ask for a complete
@@ -408,7 +391,7 @@ listing&mdash;in our example, &lsquo;<samp>ar t b.a</samp>&rsquo;.
 </p>
 </dd>
 <dt>&lsquo;<samp>x</samp>&rsquo;</dt>
-<dd><a name="index-extract-from-archive"></a>
+<dd><span id="index-extract-from-archive"></span>
 <p><em>Extract</em> members (named <var>member</var>) from the archive.  You can
 use the &lsquo;<samp>v</samp>&rsquo; modifier with this operation, to request that
 <code>ar</code> list each name as it extracts it.
@@ -430,7 +413,7 @@ keyletter, to specify variations on an operation&rsquo;s behavior:
 </p>
 <dl compact="compact">
 <dt>&lsquo;<samp>a</samp>&rsquo;</dt>
-<dd><a name="index-relative-placement-in-archive"></a>
+<dd><span id="index-relative-placement-in-archive"></span>
 <p>Add new files <em>after</em> an existing member of the
 archive.  If you use the modifier &lsquo;<samp>a</samp>&rsquo;, the name of an existing archive
 member must be present as the <var>relpos</var> argument, before the
@@ -445,7 +428,7 @@ member must be present as the <var>relpos</var> argument, before the
 </p>
 </dd>
 <dt>&lsquo;<samp>c</samp>&rsquo;</dt>
-<dd><a name="index-creating-archives"></a>
+<dd><span id="index-creating-archives"></span>
 <p><em>Create</em> the archive.  The specified <var>archive</var> is always
 created if it did not exist, when you request an update.  But a warning is
 issued unless you specify in advance that you expect to create it, by
@@ -453,8 +436,8 @@ using this modifier.
 </p>
 </dd>
 <dt>&lsquo;<samp>D</samp>&rsquo;</dt>
-<dd><a name="index-deterministic-archives"></a>
-<a name="index-_002d_002denable_002ddeterministic_002darchives"></a>
+<dd><span id="index-deterministic-archives"></span>
+<span id="index-_002d_002denable_002ddeterministic_002darchives"></span>
 <p>Operate in <em>deterministic</em> mode.  When adding files and the archive
 index use zero for UIDs, GIDs, timestamps, and use consistent file modes
 for all files.  When this option is used, if <code>ar</code> is used with
@@ -497,14 +480,14 @@ entries in the archive with the same name.  Extract or delete instance
 </p>
 </dd>
 <dt>&lsquo;<samp>o</samp>&rsquo;</dt>
-<dd><a name="index-dates-in-archive"></a>
+<dd><span id="index-dates-in-archive"></span>
 <p>Preserve the <em>original</em> dates of members when extracting them.  If
 you do not specify this modifier, files extracted from the archive
 are stamped with the time of extraction.
 </p>
 </dd>
 <dt>&lsquo;<samp>O</samp>&rsquo;</dt>
-<dd><a name="index-offsets-of-files"></a>
+<dd><span id="index-offsets-of-files"></span>
 <p>Display member offsets inside the archive. Use together with the &lsquo;<samp>t</samp>&rsquo;
 option.
 </p>
@@ -518,8 +501,8 @@ Modifying such archives with <small>GNU</small> <code>ar</code> without using
 thin archive.  Note that <samp>P</samp> may be useful when adding files to
 a thin archive since <samp>r</samp> without <samp>P</samp> ignores the path
 when choosing which element to replace.  Thus
-</p><div class="smallexample">
-<pre class="smallexample">ar rcST archive.a subdir/file1 subdir/file2 file1
+</p><div class="example">
+<pre class="example">ar rcST archive.a subdir/file1 subdir/file2 file1
 </pre></div>
 <p>will result in the first <code>subdir/file1</code> being replaced with
 <code>file1</code> from the current directory.  Adding <samp>P</samp> will
@@ -527,7 +510,7 @@ prevent this replacement.
 </p>
 </dd>
 <dt>&lsquo;<samp>s</samp>&rsquo;</dt>
-<dd><a name="index-writing-archive-index"></a>
+<dd><span id="index-writing-archive-index"></span>
 <p>Write an object-file index into the archive, or update an existing one,
 even if no other change is made to the archive.  You may use this modifier
 flag either with any operation, or alone.  Running &lsquo;<samp>ar s</samp>&rsquo; on an
@@ -535,7 +518,7 @@ archive is equivalent to running &lsquo;<samp>ranlib</samp>&rsquo; on it.
 </p>
 </dd>
 <dt>&lsquo;<samp>S</samp>&rsquo;</dt>
-<dd><a name="index-not-writing-archive-index"></a>
+<dd><span id="index-not-writing-archive-index"></span>
 <p>Do not generate an archive symbol table.  This can speed up building a
 large library in several steps.  The resulting archive can not be used
 with the linker.  In order to build a symbol table, you must omit the
@@ -550,7 +533,7 @@ X/Open System Interface.
 </p>
 </dd>
 <dt>&lsquo;<samp>u</samp>&rsquo;</dt>
-<dd><a name="index-updating-an-archive"></a>
+<dd><span id="index-updating-an-archive"></span>
 <p>Normally, &lsquo;<samp>ar r</samp>&rsquo;&hellip; inserts all files
 listed into the archive.  If you would like to insert <em>only</em> those
 of the files you list that are newer than existing members of the same
@@ -561,8 +544,8 @@ advantage from the operation &lsquo;<samp>q</samp>&rsquo;.
 </p>
 </dd>
 <dt>&lsquo;<samp>U</samp>&rsquo;</dt>
-<dd><a name="index-deterministic-archives-1"></a>
-<a name="index-_002d_002denable_002ddeterministic_002darchives-1"></a>
+<dd><span id="index-deterministic-archives-1"></span>
+<span id="index-_002d_002denable_002ddeterministic_002darchives-1"></span>
 <p>Do <em>not</em> operate in <em>deterministic</em> mode.  This is the inverse
 of the &lsquo;<samp>D</samp>&rsquo; modifier, above: added files and the archive index will
 get their actual UID, GID, timestamp, and file mode values.
@@ -605,7 +588,7 @@ of the other &lsquo;<samp>-X</samp>&rsquo; options; in particular, it does not s
 </p>
 </dd>
 <dt>&lsquo;<samp>--plugin <var>name</var></samp>&rsquo;</dt>
-<dd><a name="index-plugins"></a>
+<dd><span id="index-plugins"></span>
 <p>The optional command-line switch <samp>--plugin <var>name</var></samp> causes
 <code>ar</code> to load the plugin called <var>name</var> which adds support
 for more file formats, including object files with link-time
@@ -652,7 +635,7 @@ just handled in long form.
 </p>
 </dd>
 <dt>&lsquo;<samp>--thin</samp>&rsquo;</dt>
-<dd><a name="index-creating-thin-archive"></a>
+<dd><span id="index-creating-thin-archive"></span>
 <p>Make the specified <var>archive</var> a <em>thin</em> archive.  If it already
 exists and is a regular archive, the existing members must be present
 in the same directory as <var>archive</var>.
@@ -662,20 +645,18 @@ in the same directory as <var>archive</var>.
 
 
 <hr>
-<a name="ar-scripts"></a>
-<div class="header">
+<span id="ar-scripts"></span><div class="header">
 <p>
-Previous: <a href="#ar-cmdline" accesskey="p" rel="previous">ar cmdline</a>, Up: <a href="#ar" accesskey="u" rel="up">ar</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Previous: <a href="#ar-cmdline" accesskey="p" rel="prev">ar cmdline</a>, Up: <a href="#ar" accesskey="u" rel="up">ar</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="Controlling-ar-with-a-Script"></a>
-<h3 class="section">1.2 Controlling <code>ar</code> with a Script</h3>
+<span id="Controlling-ar-with-a-Script"></span><h3 class="section">1.2 Controlling <code>ar</code> with a Script</h3>
 
-<div class="smallexample">
-<pre class="smallexample">ar -M [ &lt;<var>script</var> ]
+<div class="example">
+<pre class="example">ar -M [ &lt;<var>script</var> ]
 </pre></div>
 
-<a name="index-MRI-compatibility_002c-ar"></a>
-<a name="index-scripts_002c-ar"></a>
+<span id="index-MRI-compatibility_002c-ar"></span>
+<span id="index-scripts_002c-ar"></span>
 <p>If you use the single command-line option &lsquo;<samp>-M</samp>&rsquo; with <code>ar</code>, you
 can control its operation with a rudimentary command language.  This
 form of <code>ar</code> operates interactively if standard input is coming
@@ -831,19 +812,17 @@ command.
 
 
 <hr>
-<a name="nm"></a>
-<div class="header">
+<span id="nm"></span><div class="header">
 <p>
-Next: <a href="#objcopy" accesskey="n" rel="next">objcopy</a>, Previous: <a href="#ar" accesskey="p" rel="previous">ar</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#objcopy" accesskey="n" rel="next">objcopy</a>, Previous: <a href="#ar" accesskey="p" rel="prev">ar</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="nm-1"></a>
-<h2 class="chapter">2 nm</h2>
-<a name="index-symbols"></a>
-<a name="index-nm"></a>
+<span id="nm-1"></span><h2 class="chapter">2 nm</h2>
+<span id="index-symbols"></span>
+<span id="index-nm"></span>
 
 
-<div class="smallexample">
-<pre class="smallexample">nm [<samp>-A</samp>|<samp>-o</samp>|<samp>--print-file-name</samp>]
+<div class="example">
+<pre class="example">nm [<samp>-A</samp>|<samp>-o</samp>|<samp>--print-file-name</samp>]
    [<samp>-a</samp>|<samp>--debug-syms</samp>]
    [<samp>-B</samp>|<samp>--format=bsd</samp>]
    [<samp>-C</samp>|<samp>--demangle</samp>[=<var>style</var>]]
@@ -915,7 +894,7 @@ linking, multiple common symbols may appear with the same name.  If the
 symbol is defined anywhere, the common symbols are treated as undefined
 references.
 For more details on common symbols, see the discussion of
-&ndash;warn-common in <a href="http://sourceware.org/binutils/docs/ld/Options.html#Options">Linker options</a> in <cite>The GNU linker</cite>.
+&ndash;warn-common in <a href="https://sourceware.org/binutils/docs/ld/Options.html#Options">Linker options</a> in <cite>The GNU linker</cite>.
 The lower case <var>c</var> character is used when the symbol is in a
 special section for small commons.
 </p>
@@ -1042,9 +1021,9 @@ equivalent.
 <dt><code>-A</code></dt>
 <dt><code>-o</code></dt>
 <dt><code>--print-file-name</code></dt>
-<dd><a name="index-input-file-name"></a>
-<a name="index-file-name"></a>
-<a name="index-source-file-name"></a>
+<dd><span id="index-input-file-name"></span>
+<span id="index-file-name"></span>
+<span id="index-source-file-name"></span>
 <p>Precede each symbol by the name of the input file (or archive member)
 in which it was found, rather than identifying the input file once only,
 before all of its symbols.
@@ -1052,20 +1031,20 @@ before all of its symbols.
 </dd>
 <dt><code>-a</code></dt>
 <dt><code>--debug-syms</code></dt>
-<dd><a name="index-debugging-symbols"></a>
+<dd><span id="index-debugging-symbols"></span>
 <p>Display all symbols, even debugger-only symbols; normally these are not
 listed.
 </p>
 </dd>
 <dt><code>-B</code></dt>
-<dd><a name="index-nm-format"></a>
-<a name="index-nm-compatibility"></a>
+<dd><span id="index-nm-format"></span>
+<span id="index-nm-compatibility"></span>
 <p>The same as <samp>--format=bsd</samp> (for compatibility with the MIPS <code>nm</code>).
 </p>
 </dd>
 <dt><code>-C</code></dt>
 <dt><code>--demangle[=<var>style</var>]</code></dt>
-<dd><a name="index-demangling-in-nm"></a>
+<dd><span id="index-demangling-in-nm"></span>
 <p>Decode (<em>demangle</em>) low-level symbol names into user-level names.
 Besides removing any initial underscore prepended by the system, this
 makes C++ function names readable. Different compilers have different
@@ -1097,7 +1076,7 @@ possible and any bug reports about such an event will be rejected.
 </dd>
 <dt><code>-D</code></dt>
 <dt><code>--dynamic</code></dt>
-<dd><a name="index-dynamic-symbols"></a>
+<dd><span id="index-dynamic-symbols"></span>
 <p>Display the dynamic symbols rather than the normal symbols.  This is
 only meaningful for dynamic objects, such as certain types of shared
 libraries.
@@ -1105,8 +1084,8 @@ libraries.
 </dd>
 <dt><code>-f <var>format</var></code></dt>
 <dt><code>--format=<var>format</var></code></dt>
-<dd><a name="index-nm-format-1"></a>
-<a name="index-nm-compatibility-1"></a>
+<dd><span id="index-nm-format-1"></span>
+<span id="index-nm-compatibility-1"></span>
 <p>Use the output format <var>format</var>, which can be <code>bsd</code>,
 <code>sysv</code>, <code>posix</code> or <code>just-symbols</code>.  The default is <code>bsd</code>.
 Only the first character of <var>format</var> is significant; it can be
@@ -1115,7 +1094,7 @@ either upper or lower case.
 </dd>
 <dt><code>-g</code></dt>
 <dt><code>--extern-only</code></dt>
-<dd><a name="index-external-symbols"></a>
+<dd><span id="index-external-symbols"></span>
 <p>Display only external symbols.
 </p>
 </dd>
@@ -1140,7 +1119,7 @@ function symbols.
 </dd>
 <dt><code>-l</code></dt>
 <dt><code>--line-numbers</code></dt>
-<dd><a name="index-symbol-line-numbers"></a>
+<dd><span id="index-symbol-line-numbers"></span>
 <p>For each symbol, use debugging information to try to find a filename and
 line number.  For a defined symbol, look for the line number of the
 address of the symbol.  For an undefined symbol, look for the line
@@ -1149,7 +1128,7 @@ information can be found, print it after the other symbol information.
 </p>
 </dd>
 <dt><code>--inlines</code></dt>
-<dd><a name="index-objdump-inlines"></a>
+<dd><span id="index-objdump-inlines"></span>
 <p>When option <samp>-l</samp> is active, if the address belongs to a
 function that was inlined, then this option causes the source 
 information for all enclosing scopes back to the first non-inlined
@@ -1168,7 +1147,7 @@ by their names.
 </dd>
 <dt><code>-p</code></dt>
 <dt><code>--no-sort</code></dt>
-<dd><a name="index-sorting-symbols"></a>
+<dd><span id="index-sorting-symbols"></span>
 <p>Do not bother to sort the symbols in any order; print them in the order
 encountered.
 </p>
@@ -1195,7 +1174,7 @@ calculated size is displayed.
 </dd>
 <dt><code>-s</code></dt>
 <dt><code>--print-armap</code></dt>
-<dd><a name="index-symbol-index_002c-listing"></a>
+<dd><span id="index-symbol-index_002c-listing"></span>
 <p>When listing symbols from archive members, include the index: a mapping
 (stored in the archive by <code>ar</code> or <code>ranlib</code>) of which modules
 contain definitions for which names.
@@ -1209,16 +1188,16 @@ contain definitions for which names.
 </dd>
 <dt><code>-u</code></dt>
 <dt><code>--undefined-only</code></dt>
-<dd><a name="index-external-symbols-1"></a>
-<a name="index-undefined-symbols"></a>
+<dd><span id="index-external-symbols-1"></span>
+<span id="index-undefined-symbols"></span>
 <p>Display only undefined symbols (those external to each object file).
 By default both defined and undefined symbols are displayed.
 </p>
 </dd>
 <dt><code>-U</code></dt>
 <dt><code>--defined-only</code></dt>
-<dd><a name="index-external-symbols-2"></a>
-<a name="index-undefined-symbols-1"></a>
+<dd><span id="index-external-symbols-2"></span>
+<span id="index-undefined-symbols-1"></span>
 <p>Display only defined symbols for each object file.
 By default both defined and undefined symbols are displayed.
 </p>
@@ -1236,7 +1215,7 @@ to <samp>-X 32</samp>, which is not supported by <small>GNU</small> <code>nm</co
 </p>
 </dd>
 <dt><code>--plugin <var>name</var></code></dt>
-<dd><a name="index-plugins-1"></a>
+<dd><span id="index-plugins-1"></span>
 <p>Load the plugin called <var>name</var> to add support for extra target
 types.  This option is only available if the toolchain has been built
 with plugin support enabled.
@@ -1314,7 +1293,7 @@ version information is displayed.
 </p>
 </dd>
 <dt><code>--target=<var>bfdname</var></code></dt>
-<dd><a name="index-object-code-format"></a>
+<dd><span id="index-object-code-format"></span>
 <p>Specify an object code format other than your system&rsquo;s default format.
 See <a href="#Target-Selection">Target Selection</a>, for more information.
 </p>
@@ -1324,17 +1303,15 @@ See <a href="#Target-Selection">Target Selection</a>, for more information.
 
 
 <hr>
-<a name="objcopy"></a>
-<div class="header">
+<span id="objcopy"></span><div class="header">
 <p>
-Next: <a href="#objdump" accesskey="n" rel="next">objdump</a>, Previous: <a href="#nm" accesskey="p" rel="previous">nm</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#objdump" accesskey="n" rel="next">objdump</a>, Previous: <a href="#nm" accesskey="p" rel="prev">nm</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="objcopy-1"></a>
-<h2 class="chapter">3 objcopy</h2>
+<span id="objcopy-1"></span><h2 class="chapter">3 objcopy</h2>
 
 
-<div class="smallexample">
-<pre class="smallexample">objcopy [<samp>-F</samp> <var>bfdname</var>|<samp>--target=</samp><var>bfdname</var>]
+<div class="example">
+<pre class="example">objcopy [<samp>-F</samp> <var>bfdname</var>|<samp>--target=</samp><var>bfdname</var>]
         [<samp>-I</samp> <var>bfdname</var>|<samp>--input-target=</samp><var>bfdname</var>]
         [<samp>-O</samp> <var>bfdname</var>|<samp>--output-target=</samp><var>bfdname</var>]
         [<samp>-B</samp> <var>bfdarch</var>|<samp>--binary-architecture=</samp><var>bfdarch</var>]
@@ -1439,7 +1416,7 @@ between any two formats may not work as expected.
 deletes them afterward.  <code>objcopy</code> uses <small>BFD</small> to do all its
 translation work; it has access to all the formats described in <small>BFD</small>
 and thus is able to recognize most formats without being told
-explicitly.  See <a href="http://sourceware.org/binutils/docs/ld/BFD.html#BFD">BFD</a> in <cite>Using LD</cite>.
+explicitly.  See <a href="https://sourceware.org/binutils/docs/ld/BFD.html#BFD">BFD</a> in <cite>Using LD</cite>.
 </p>
 <p><code>objcopy</code> can be used to generate S-records by using an output
 target of &lsquo;<samp>srec</samp>&rsquo; (e.g., use &lsquo;<samp>-O srec</samp>&rsquo;).
@@ -1516,8 +1493,8 @@ point (!) then matching sections will not be copied, even if earlier
 use of <samp>--only-section</samp> on the same command line would
 otherwise copy it.  For example:
 </p>
-<div class="smallexample">
-<pre class="smallexample">  --only-section=.text.* --only-section=!.text.foo
+<div class="example">
+<pre class="example">  --only-section=.text.* --only-section=!.text.foo
 </pre></div>
 
 <p>will copy all sectinos matching &rsquo;.text.*&rsquo; but not the section
@@ -1538,8 +1515,8 @@ point (!) then matching sections will not be removed even if an
 earlier use of <samp>--remove-section</samp> on the same command line
 would otherwise remove it.  For example:
 </p>
-<div class="smallexample">
-<pre class="smallexample">  --remove-section=.text.* --remove-section=!.text.foo
+<div class="example">
+<pre class="example">  --remove-section=.text.* --remove-section=!.text.foo
 </pre></div>
 
 <p>will remove all sections matching the pattern &rsquo;.text.*&rsquo;, but will not
@@ -1561,8 +1538,8 @@ such as &lsquo;<samp>.rela.plt</samp>&rsquo; from an executable or shared librar
 are accepted in <var>sectionpattern</var>.
 For example:
 </p>
-<div class="smallexample">
-<pre class="smallexample">  --remove-relocations=.text.*
+<div class="example">
+<pre class="example">  --remove-relocations=.text.*
 </pre></div>
 
 <p>will remove the relocations for all sections matching the pattern
@@ -1574,8 +1551,8 @@ removed even if an earlier use of <samp>--remove-relocations</samp> on the
 same command line would otherwise cause the relocations to be removed.
 For example:
 </p>
-<div class="smallexample">
-<pre class="smallexample">  --remove-relocations=.text.* --remove-relocations=!.text.foo
+<div class="example">
+<pre class="example">  --remove-relocations=.text.* --remove-relocations=!.text.foo
 </pre></div>
 
 <p>will remove all relocations for sections matching the pattern
@@ -1660,8 +1637,8 @@ name.  If the first character of the symbol name is the exclamation
 point (!) then the sense of the switch is reversed for that symbol.
 For example:
 </p>
-<div class="smallexample">
-<pre class="smallexample">  -w -W !foo -W fo*
+<div class="example">
+<pre class="example">  -w -W !foo -W fo*
 </pre></div>
 
 <p>would cause objcopy to weaken all symbols that start with &ldquo;fo&rdquo;
@@ -1729,8 +1706,8 @@ as those of the input file.
 </dd>
 <dt><code>-D</code></dt>
 <dt><code>--enable-deterministic-archives</code></dt>
-<dd><a name="index-deterministic-archives-2"></a>
-<a name="index-_002d_002denable_002ddeterministic_002darchives-2"></a>
+<dd><span id="index-deterministic-archives-2"></span>
+<span id="index-_002d_002denable_002ddeterministic_002darchives-2"></span>
 <p>Operate in <em>deterministic</em> mode.  When copying archive members
 and writing the archive index, use zero for UIDs, GIDs, timestamps,
 and use consistent file modes for all files.
@@ -1742,8 +1719,8 @@ It can be disabled with the &lsquo;<samp>-U</samp>&rsquo; option, below.
 </dd>
 <dt><code>-U</code></dt>
 <dt><code>--disable-deterministic-archives</code></dt>
-<dd><a name="index-deterministic-archives-3"></a>
-<a name="index-_002d_002denable_002ddeterministic_002darchives-3"></a>
+<dd><span id="index-deterministic-archives-3"></span>
+<span id="index-_002d_002denable_002ddeterministic_002darchives-3"></span>
 <p>Do <em>not</em> operate in <em>deterministic</em> mode.  This is the
 inverse of the <samp>-D</samp> option, above: when copying archive members
 and writing the archive index, use their actual UID, GID, timestamp,
@@ -1780,7 +1757,7 @@ start address.
 </dd>
 <dt><code>--change-start <var>incr</var></code></dt>
 <dt><code>--adjust-start <var>incr</var></code></dt>
-<dd><a name="index-changing-start-address"></a>
+<dd><span id="index-changing-start-address"></span>
 <p>Change the start address (also known as the entry address) by adding
 <var>incr</var>.  Not all object file formats support setting the start
 address.
@@ -1788,7 +1765,7 @@ address.
 </dd>
 <dt><code>--change-addresses <var>incr</var></code></dt>
 <dt><code>--adjust-vma <var>incr</var></code></dt>
-<dd><a name="index-changing-object-addresses"></a>
+<dd><span id="index-changing-object-addresses"></span>
 <p>Change the VMA and LMA addresses of all sections, as well as the start
 address, by adding <var>incr</var>.  Some object file formats do not permit
 section addresses to be changed arbitrarily.  Note that this does not
@@ -1799,7 +1776,7 @@ that they are loaded at a different address, the program may fail.
 </dd>
 <dt><code>--change-section-address <var>sectionpattern</var>{=,+,-}<var>val</var></code></dt>
 <dt><code>--adjust-section-vma <var>sectionpattern</var>{=,+,-}<var>val</var></code></dt>
-<dd><a name="index-changing-section-address"></a>
+<dd><span id="index-changing-section-address"></span>
 <p>Set or change both the VMA address and the LMA address of any section
 matching <var>sectionpattern</var>.  If &lsquo;<samp>=</samp>&rsquo; is used, the section
 address is set to <var>val</var>.  Otherwise, <var>val</var> is added to or
@@ -1810,7 +1787,7 @@ match any sections in the input file, a warning will be issued, unless
 </p>
 </dd>
 <dt><code>--change-section-lma <var>sectionpattern</var>{=,+,-}<var>val</var></code></dt>
-<dd><a name="index-changing-section-LMA"></a>
+<dd><span id="index-changing-section-LMA"></span>
 <p>Set or change the LMA address of any sections matching
 <var>sectionpattern</var>.  The LMA address is the address where the
 section will be loaded into memory at program load time.  Normally
@@ -1825,7 +1802,7 @@ warning will be issued, unless <samp>--no-change-warnings</samp> is used.
 </p>
 </dd>
 <dt><code>--change-section-vma <var>sectionpattern</var>{=,+,-}<var>val</var></code></dt>
-<dd><a name="index-changing-section-VMA"></a>
+<dd><span id="index-changing-section-VMA"></span>
 <p>Set or change the VMA address of any section matching
 <var>sectionpattern</var>.  The VMA address is the address where the
 section will be located once the program has started executing.
@@ -1935,8 +1912,8 @@ since this will always create a section called .data.  If for example,
 you wanted instead to create a section called .rodata containing binary
 data you could use the following command line to achieve it:
 </p>
-<div class="smallexample">
-<pre class="smallexample">  objcopy -I binary -O &lt;output_format&gt; -B &lt;architecture&gt; \
+<div class="example">
+<pre class="example">  objcopy -I binary -O &lt;output_format&gt; -B &lt;architecture&gt; \
    --rename-section .data=.rodata,alloc,load,readonly,data,contents \
    &lt;input_binary_file&gt; &lt;output_object_file&gt;
 </pre></div>
@@ -2143,8 +2120,8 @@ Instead put the debug info file in the current directory and use the
 <samp>--add-gnu-debuglink</samp> option without any directory components,
 like this:
 </p>
-<div class="smallexample">
-<pre class="smallexample"> objcopy --add-gnu-debuglink=foo.debug
+<div class="example">
+<pre class="example"> objcopy --add-gnu-debuglink=foo.debug
 </pre></div>
 
 <p>At debug time the debugger will attempt to look for the separate debug
@@ -2386,20 +2363,18 @@ archives, &lsquo;<samp>objcopy -V</samp>&rsquo; lists all members of the archive
 
 
 <hr>
-<a name="objdump"></a>
-<div class="header">
+<span id="objdump"></span><div class="header">
 <p>
-Next: <a href="#ranlib" accesskey="n" rel="next">ranlib</a>, Previous: <a href="#objcopy" accesskey="p" rel="previous">objcopy</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#ranlib" accesskey="n" rel="next">ranlib</a>, Previous: <a href="#objcopy" accesskey="p" rel="prev">objcopy</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="objdump-1"></a>
-<h2 class="chapter">4 objdump</h2>
+<span id="objdump-1"></span><h2 class="chapter">4 objdump</h2>
 
-<a name="index-object-file-information"></a>
-<a name="index-objdump"></a>
+<span id="index-object-file-information"></span>
+<span id="index-objdump"></span>
 
 
-<div class="smallexample">
-<pre class="smallexample">objdump [<samp>-a</samp>|<samp>--archive-headers</samp>]
+<div class="example">
+<pre class="example">objdump [<samp>-a</samp>|<samp>--archive-headers</samp>]
         [<samp>-b</samp> <var>bfdname</var>|<samp>--target=<var>bfdname</var></samp>]
         [<samp>-C</samp>|<samp>--demangle</samp>[=<var>style</var>] ]
         [<samp>-d</samp>|<samp>--disassemble</samp>[=<var>symbol</var>]]
@@ -2481,7 +2456,7 @@ equivalent.  At least one option from the list
 <dl compact="compact">
 <dt><code>-a</code></dt>
 <dt><code>--archive-header</code></dt>
-<dd><a name="index-archive-headers"></a>
+<dd><span id="index-archive-headers"></span>
 <p>If any of the <var>objfile</var> files are archives, display the archive
 header information (in a format similar to &lsquo;<samp>ls -l</samp>&rsquo;).  Besides the
 information you could list with &lsquo;<samp>ar tv</samp>&rsquo;, &lsquo;<samp>objdump -a</samp>&rsquo; shows
@@ -2489,8 +2464,8 @@ the object file format of each archive member.
 </p>
 </dd>
 <dt><code>--adjust-vma=<var>offset</var></code></dt>
-<dd><a name="index-section-addresses-in-objdump"></a>
-<a name="index-VMA-in-objdump"></a>
+<dd><span id="index-section-addresses-in-objdump"></span>
+<span id="index-VMA-in-objdump"></span>
 <p>When dumping information, first add <var>offset</var> to all the section
 addresses.  This is useful if the section addresses do not correspond to
 the symbol table, which can happen when putting sections at particular
@@ -2500,7 +2475,7 @@ such as a.out.
 </dd>
 <dt><code>-b <var>bfdname</var></code></dt>
 <dt><code>--target=<var>bfdname</var></code></dt>
-<dd><a name="index-object-code-format-1"></a>
+<dd><span id="index-object-code-format-1"></span>
 <p>Specify that the object-code format for the object files is
 <var>bfdname</var>.  This option may not be necessary; <var>objdump</var> can
 automatically recognize many formats.
@@ -2518,7 +2493,7 @@ See <a href="#Target-Selection">Target Selection</a>, for more information.
 </dd>
 <dt><code>-C</code></dt>
 <dt><code>--demangle[=<var>style</var>]</code></dt>
-<dd><a name="index-demangling-in-objdump"></a>
+<dd><span id="index-demangling-in-objdump"></span>
 <p>Decode (<em>demangle</em>) low-level symbol names into user-level names.
 Besides removing any initial underscore prepended by the system, this
 makes C++ function names readable.  Different compilers have different
@@ -2562,8 +2537,8 @@ with ctags tool.
 <dt><code>-d</code></dt>
 <dt><code>--disassemble</code></dt>
 <dt><code>--disassemble=<var>symbol</var></code></dt>
-<dd><a name="index-disassembling-object-code"></a>
-<a name="index-machine-instructions"></a>
+<dd><span id="index-disassembling-object-code"></span>
+<span id="index-machine-instructions"></span>
 <p>Display the assembler mnemonics for the machine instructions from the
 input file.  This option only disassembles those sections which are 
 expected to contain instructions.  If the optional <var>symbol</var>
@@ -2615,8 +2590,8 @@ the older disassembly format.
 <dt><code>-EB</code></dt>
 <dt><code>-EL</code></dt>
 <dt><code>--endian={big|little}</code></dt>
-<dd><a name="index-endianness"></a>
-<a name="index-disassembly-endianness"></a>
+<dd><span id="index-endianness"></span>
+<span id="index-disassembly-endianness"></span>
 <p>Specify the endianness of the object files.  This only affects
 disassembly.  This can be useful when disassembling a file format which
 does not describe endianness information, such as S-records.
@@ -2624,14 +2599,14 @@ does not describe endianness information, such as S-records.
 </dd>
 <dt><code>-f</code></dt>
 <dt><code>--file-headers</code></dt>
-<dd><a name="index-object-file-header"></a>
+<dd><span id="index-object-file-header"></span>
 <p>Display summary information from the overall header of
 each of the <var>objfile</var> files.
 </p>
 </dd>
 <dt><code>-F</code></dt>
 <dt><code>--file-offsets</code></dt>
-<dd><a name="index-object-file-offsets"></a>
+<dd><span id="index-object-file-offsets"></span>
 <p>When disassembling sections, whenever a symbol is displayed, also
 display the file offset of the region of data that is about to be
 dumped.  If zeroes are being skipped, then when disassembly resumes,
@@ -2641,7 +2616,7 @@ display the file offset of the location from where the dump starts.
 </p>
 </dd>
 <dt><code>--file-start-context</code></dt>
-<dd><a name="index-source-code-context"></a>
+<dd><span id="index-source-code-context"></span>
 <p>Specify that when displaying interlisted source code/disassembly
 (assumes <samp>-S</samp>) from a file that has not yet been displayed, extend the
 context to the start of the file.
@@ -2650,7 +2625,7 @@ context to the start of the file.
 <dt><code>-h</code></dt>
 <dt><code>--section-headers</code></dt>
 <dt><code>--headers</code></dt>
-<dd><a name="index-section-headers"></a>
+<dd><span id="index-section-headers"></span>
 <p>Display summary information from the section headers of the
 object file.
 </p>
@@ -2676,15 +2651,15 @@ since the exact setting of the flag bits might be important.
 </dd>
 <dt><code>-i</code></dt>
 <dt><code>--info</code></dt>
-<dd><a name="index-architectures-available"></a>
-<a name="index-object-formats-available"></a>
+<dd><span id="index-architectures-available"></span>
+<span id="index-object-formats-available"></span>
 <p>Display a list showing all architectures and object formats available
 for specification with <samp>-b</samp> or <samp>-m</samp>.
 </p>
 </dd>
 <dt><code>-j <var>name</var></code></dt>
 <dt><code>--section=<var>name</var></code></dt>
-<dd><a name="index-section-information"></a>
+<dd><span id="index-section-information"></span>
 <p>Display information only for section <var>name</var>.
 </p>
 </dd>
@@ -2698,7 +2673,7 @@ command line options will be displayed.
 </dd>
 <dt><code>-l</code></dt>
 <dt><code>--line-numbers</code></dt>
-<dd><a name="index-source-filenames-for-object-files"></a>
+<dd><span id="index-source-filenames-for-object-files"></span>
 <p>Label the display (using debugging information) with the filename and
 source line numbers corresponding to the object code or relocs shown.
 Only useful with <samp>-d</samp>, <samp>-D</samp>, or <samp>-r</samp>.
@@ -2706,8 +2681,8 @@ Only useful with <samp>-d</samp>, <samp>-D</samp>, or <samp>-r</samp>.
 </dd>
 <dt><code>-m <var>machine</var></code></dt>
 <dt><code>--architecture=<var>machine</var></code></dt>
-<dd><a name="index-architecture"></a>
-<a name="index-disassembly-architecture"></a>
+<dd><span id="index-architecture"></span>
+<span id="index-disassembly-architecture"></span>
 <p>Specify the architecture to use when disassembling object files.  This
 can be useful when disassembling object files which do not describe
 architecture information, such as S-records.  You can list the available
@@ -2963,7 +2938,7 @@ format does not use it.
 </dd>
 <dt><code>-r</code></dt>
 <dt><code>--reloc</code></dt>
-<dd><a name="index-relocation-entries_002c-in-object-file"></a>
+<dd><span id="index-relocation-entries_002c-in-object-file"></span>
 <p>Print the relocation entries of the file.  If used with <samp>-d</samp> or
 <samp>-D</samp>, the relocations are printed interspersed with the
 disassembly.
@@ -2971,7 +2946,7 @@ disassembly.
 </dd>
 <dt><code>-R</code></dt>
 <dt><code>--dynamic-reloc</code></dt>
-<dd><a name="index-dynamic-relocation-entries_002c-in-object-file"></a>
+<dd><span id="index-dynamic-relocation-entries_002c-in-object-file"></span>
 <p>Print the dynamic relocation entries of the file.  This is only
 meaningful for dynamic objects, such as certain types of shared
 libraries.  As for <samp>-r</samp>, if used with <samp>-d</samp> or
@@ -2981,16 +2956,16 @@ disassembly.
 </dd>
 <dt><code>-s</code></dt>
 <dt><code>--full-contents</code></dt>
-<dd><a name="index-sections_002c-full-contents"></a>
-<a name="index-object-file-sections"></a>
+<dd><span id="index-sections_002c-full-contents"></span>
+<span id="index-object-file-sections"></span>
 <p>Display the full contents of any sections requested.  By default all
 non-empty sections are displayed.
 </p>
 </dd>
 <dt><code>-S</code></dt>
 <dt><code>--source</code></dt>
-<dd><a name="index-source-disassembly"></a>
-<a name="index-disassembly_002c-with-source"></a>
+<dd><span id="index-source-disassembly"></span>
+<span id="index-disassembly_002c-with-source"></span>
 <p>Display source code intermixed with disassembly, if possible.  Implies
 <samp>-d</samp>.
 </p>
@@ -3001,8 +2976,8 @@ not just the first one.
 </p>
 </dd>
 <dt><code>--source-comment[=<var>txt</var>]</code></dt>
-<dd><a name="index-source-disassembly-1"></a>
-<a name="index-disassembly_002c-with-source-1"></a>
+<dd><span id="index-source-disassembly-1"></span>
+<span id="index-disassembly_002c-with-source-1"></span>
 <p>Like the <samp>-S</samp> option, but all source code lines are displayed
 with a prefix of <var>txt</var>.  Typically <var>txt</var> will be a comment
 string which can be used to distinguish the assembler code from the
@@ -3011,13 +2986,13 @@ source code.  If <var>txt</var> is not provided then a default string of
 </p>
 </dd>
 <dt><code>--prefix=<var>prefix</var></code></dt>
-<dd><a name="index-Add-prefix-to-absolute-paths"></a>
+<dd><span id="index-Add-prefix-to-absolute-paths"></span>
 <p>Specify <var>prefix</var> to add to the absolute paths when used with
 <samp>-S</samp>.
 </p>
 </dd>
 <dt><code>--prefix-strip=<var>level</var></code></dt>
-<dd><a name="index-Strip-absolute-paths"></a>
+<dd><span id="index-Strip-absolute-paths"></span>
 <p>Indicate how many initial directory names to strip off the hardwired
 absolute paths. It has no effect without <samp>--prefix=</samp><var>prefix</var>.
 </p>
@@ -3034,7 +3009,7 @@ This is the default when <samp>--prefix-addresses</samp> is used.
 </p>
 </dd>
 <dt><code>--insn-width=<var>width</var></code></dt>
-<dd><a name="index-Instruction-width"></a>
+<dd><span id="index-Instruction-width"></span>
 <p>Display <var>width</var> bytes on a single line when disassembling
 instructions.
 </p>
@@ -3282,8 +3257,8 @@ siblings and children of the specified DIE will be printed.
 
 </dd>
 <dt><code>--ctf[=<var>section</var>]</code></dt>
-<dd><a name="index-CTF"></a>
-<a name="index-Compact-Type-Format"></a>
+<dd><span id="index-CTF"></span>
+<span id="index-Compact-Type-Format"></span>
 
 <p>Display the contents of the specified CTF section.  CTF sections themselves
 contain many subsections, all of which are displayed in order.
@@ -3307,7 +3282,7 @@ used for the parent.
 
 </dd>
 <dt><code>--sframe[=<var>section</var>]</code></dt>
-<dd><a name="index-SFrame"></a>
+<dd><span id="index-SFrame"></span>
 
 <p>Display the contents of the specified SFrame section.
 </p>
@@ -3317,10 +3292,10 @@ name emitted by <code>ld</code>.
 </dd>
 <dt><code>-G</code></dt>
 <dt><code>--stabs</code></dt>
-<dd><a name="index-stab"></a>
-<a name="index-_002estab"></a>
-<a name="index-debug-symbols"></a>
-<a name="index-ELF-object-file-format"></a>
+<dd><span id="index-stab"></span>
+<span id="index-_002estab"></span>
+<span id="index-debug-symbols"></span>
+<span id="index-ELF-object-file-format"></span>
 <p>Display the full contents of any sections requested.  Display the
 contents of the .stab and .stab.index and .stab.excl sections from an
 ELF file.  This is only useful on systems (such as Solaris 2.0) in which
@@ -3331,28 +3306,28 @@ output.
 </p>
 </dd>
 <dt><code>--start-address=<var>address</var></code></dt>
-<dd><a name="index-start_002daddress"></a>
+<dd><span id="index-start_002daddress"></span>
 <p>Start displaying data at the specified address.  This affects the output
 of the <samp>-d</samp>, <samp>-r</samp> and <samp>-s</samp> options.
 </p>
 </dd>
 <dt><code>--stop-address=<var>address</var></code></dt>
-<dd><a name="index-stop_002daddress"></a>
+<dd><span id="index-stop_002daddress"></span>
 <p>Stop displaying data at the specified address.  This affects the output
 of the <samp>-d</samp>, <samp>-r</samp> and <samp>-s</samp> options.
 </p>
 </dd>
 <dt><code>-t</code></dt>
 <dt><code>--syms</code></dt>
-<dd><a name="index-symbol-table-entries_002c-printing"></a>
+<dd><span id="index-symbol-table-entries_002c-printing"></span>
 <p>Print the symbol table entries of the file.
 This is similar to the information provided by the &lsquo;<samp>nm</samp>&rsquo; program,
 although the display format is different.  The format of the output
 depends upon the format of the file being dumped, but there are two main
 types.  One looks like this:
 </p>
-<div class="smallexample">
-<pre class="smallexample">[  4](sec  3)(fl 0x00)(ty   0)(scl   3) (nx 1) 0x00000000 .bss
+<div class="example">
+<pre class="example">[  4](sec  3)(fl 0x00)(ty   0)(scl   3) (nx 1) 0x00000000 .bss
 [  6](sec  1)(fl 0x00)(ty   0)(scl   2) (nx 0) 0x00000000 fred
 </pre></div>
 
@@ -3366,8 +3341,8 @@ the symbol.  The last two fields are the symbol&rsquo;s value and its name.
 <p>The other common output format, usually seen with ELF based files,
 looks like this:
 </p>
-<div class="smallexample">
-<pre class="smallexample">00000000 l    d  .bss   00000000 .bss
+<div class="example">
+<pre class="example">00000000 l    d  .bss   00000000 .bss
 00000000 g       .text  00000000 fred
 </pre></div>
 
@@ -3437,7 +3412,7 @@ normal symbol (a space).
 </dd>
 <dt><code>-T</code></dt>
 <dt><code>--dynamic-syms</code></dt>
-<dd><a name="index-dynamic-symbol-table-entries_002c-printing"></a>
+<dd><span id="index-dynamic-symbol-table-entries_002c-printing"></span>
 <p>Print the dynamic symbol table entries of the file.  This is only
 meaningful for dynamic objects, such as certain types of shared
 libraries.  This is similar to the information provided by the &lsquo;<samp>nm</samp>&rsquo;
@@ -3480,8 +3455,8 @@ presence of unicode sequences where they might not be expected.
 </dd>
 <dt><code>-x</code></dt>
 <dt><code>--all-headers</code></dt>
-<dd><a name="index-all-header-information_002c-object-file"></a>
-<a name="index-header-information_002c-all"></a>
+<dd><span id="index-all-header-information_002c-object-file"></span>
+<span id="index-header-information_002c-all"></span>
 <p>Display all available header information, including the symbol table and
 relocation entries.  Using <samp>-x</samp> is equivalent to specifying all of
 <samp>-a -f -h -p -r -t</samp>.
@@ -3489,7 +3464,7 @@ relocation entries.  Using <samp>-x</samp> is equivalent to specifying all of
 </dd>
 <dt><code>-w</code></dt>
 <dt><code>--wide</code></dt>
-<dd><a name="index-wide-output_002c-printing"></a>
+<dd><span id="index-wide-output_002c-printing"></span>
 <p>Format some lines for output devices that have more than 80 columns.
 Also do not truncate symbol names when they are displayed.
 </p>
@@ -3505,21 +3480,19 @@ any other data.
 
 
 <hr>
-<a name="ranlib"></a>
-<div class="header">
+<span id="ranlib"></span><div class="header">
 <p>
-Next: <a href="#size" accesskey="n" rel="next">size</a>, Previous: <a href="#objdump" accesskey="p" rel="previous">objdump</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#size" accesskey="n" rel="next">size</a>, Previous: <a href="#objdump" accesskey="p" rel="prev">objdump</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="ranlib-1"></a>
-<h2 class="chapter">5 ranlib</h2>
+<span id="ranlib-1"></span><h2 class="chapter">5 ranlib</h2>
 
-<a name="index-ranlib-1"></a>
-<a name="index-archive-contents"></a>
-<a name="index-symbol-index-1"></a>
+<span id="index-ranlib-1"></span>
+<span id="index-archive-contents"></span>
+<span id="index-symbol-index-1"></span>
 
 
-<div class="smallexample">
-<pre class="smallexample">ranlib [<samp>--plugin</samp> <var>name</var>] [<samp>-DhHvVt</samp>] <var>archive</var>
+<div class="example">
+<pre class="example">ranlib [<samp>--plugin</samp> <var>name</var>] [<samp>-DhHvVt</samp>] <var>archive</var>
 </pre></div>
 
 
@@ -3553,8 +3526,8 @@ See <a href="#ar">ar</a>.
 </p>
 </dd>
 <dt><code>-D</code></dt>
-<dd><a name="index-deterministic-archives-4"></a>
-<a name="index-_002d_002denable_002ddeterministic_002darchives-4"></a>
+<dd><span id="index-deterministic-archives-4"></span>
+<span id="index-_002d_002denable_002ddeterministic_002darchives-4"></span>
 <p>Operate in <em>deterministic</em> mode.  The symbol map archive member&rsquo;s
 header will show zero for the UID, GID, and timestamp.  When this
 option is used, multiple runs will produce identical output files.
@@ -3570,8 +3543,8 @@ below.
 </p>
 </dd>
 <dt><code>-U</code></dt>
-<dd><a name="index-deterministic-archives-5"></a>
-<a name="index-_002d_002denable_002ddeterministic_002darchives-5"></a>
+<dd><span id="index-deterministic-archives-5"></span>
+<span id="index-_002d_002denable_002ddeterministic_002darchives-5"></span>
 <p>Do <em>not</em> operate in <em>deterministic</em> mode.  This is the
 inverse of the &lsquo;<samp>-D</samp>&rsquo; option, above: the archive index will get
 actual UID, GID, timestamp, and file mode values.
@@ -3586,20 +3559,18 @@ default.
 
 
 <hr>
-<a name="size"></a>
-<div class="header">
+<span id="size"></span><div class="header">
 <p>
-Next: <a href="#strings" accesskey="n" rel="next">strings</a>, Previous: <a href="#ranlib" accesskey="p" rel="previous">ranlib</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#strings" accesskey="n" rel="next">strings</a>, Previous: <a href="#ranlib" accesskey="p" rel="prev">ranlib</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="size-1"></a>
-<h2 class="chapter">6 size</h2>
+<span id="size-1"></span><h2 class="chapter">6 size</h2>
 
-<a name="index-size"></a>
-<a name="index-section-sizes"></a>
+<span id="index-size"></span>
+<span id="index-section-sizes"></span>
 
 
-<div class="smallexample">
-<pre class="smallexample">size [<samp>-A</samp>|<samp>-B</samp>|<samp>-G</samp>|<samp>--format=</samp><var>compatibility</var>]
+<div class="example">
+<pre class="example">size [<samp>-A</samp>|<samp>-B</samp>|<samp>-G</samp>|<samp>--format=</samp><var>compatibility</var>]
      [<samp>--help</samp>]
      [<samp>-d</samp>|<samp>-o</samp>|<samp>-x</samp>|<samp>--radix=</samp><var>number</var>]
      [<samp>--common</samp>]
@@ -3627,7 +3598,7 @@ specified, the file <code>a.out</code> will be used instead.
 <dt><code>-B</code></dt>
 <dt><code>-G</code></dt>
 <dt><code>--format=<var>compatibility</var></code></dt>
-<dd><a name="index-size-display-format"></a>
+<dd><span id="index-size-display-format"></span>
 <p>Using one of these options, you can choose whether the output from <small>GNU</small>
 <code>size</code> resembles output from System V <code>size</code> (using <samp>-A</samp>,
 or <samp>--format=sysv</samp>), or Berkeley <code>size</code> (using <samp>-B</samp>, or
@@ -3638,8 +3609,8 @@ Berkeley&rsquo;s output format, but sizes are counted differently.
 </p>
 <p>Here is an example of the Berkeley (default) format of output from
 <code>size</code>:
-</p><div class="smallexample">
-<pre class="smallexample">$ size --format=Berkeley ranlib size
+</p><div class="example">
+<pre class="example">$ size --format=Berkeley ranlib size
    text    data     bss     dec     hex filename
  294880   81920   11592  388392   5ed28 ranlib
  294880   81920   11888  388688   5ee50 size
@@ -3656,8 +3627,8 @@ the <code>text</code> column, and only displays the sum of the <code>text</code>
 The <samp>--radix</samp> option can be used to change the number base for
 all columns.  Here is the same data displayed with GNU conventions:
 </p>
-<div class="smallexample">
-<pre class="smallexample">$ size --format=GNU ranlib size
+<div class="example">
+<pre class="example">$ size --format=GNU ranlib size
       text       data        bss      total filename
     279880      96920      11592     388392 ranlib
     279880      96920      11888     388688 size
@@ -3665,8 +3636,8 @@ all columns.  Here is the same data displayed with GNU conventions:
 
 <p>This is the same data, but displayed closer to System V conventions:
 </p>
-<div class="smallexample">
-<pre class="smallexample">$ size --format=SysV ranlib size
+<div class="example">
+<pre class="example">$ size --format=SysV ranlib size
 ranlib  :
 section         size         addr
 .text         294880         8192
@@ -3695,8 +3666,8 @@ Total         388688
 <dt><code>-o</code></dt>
 <dt><code>-x</code></dt>
 <dt><code>--radix=<var>number</var></code></dt>
-<dd><a name="index-size-number-format"></a>
-<a name="index-radix-for-section-sizes"></a>
+<dd><span id="index-size-number-format"></span>
+<span id="index-radix-for-section-sizes"></span>
 <p>Using one of these options, you can control whether the size of each
 section is given in decimal (<samp>-d</samp>, or <samp>--radix=10</samp>); octal
 (<samp>-o</samp>, or <samp>--radix=8</samp>); or hexadecimal (<samp>-x</samp>, or
@@ -3717,7 +3688,7 @@ or GNU format these are included in the bss size.
 </p>
 </dd>
 <dt><code>--target=<var>bfdname</var></code></dt>
-<dd><a name="index-object-code-format-2"></a>
+<dd><span id="index-object-code-format-2"></span>
 <p>Specify that the object-code format for <var>objfile</var> is
 <var>bfdname</var>.  This option may not be necessary; <code>size</code> can
 automatically recognize many formats.
@@ -3740,21 +3711,19 @@ program, but it is not supported by the GNU Binutils version.
 
 
 <hr>
-<a name="strings"></a>
-<div class="header">
+<span id="strings"></span><div class="header">
 <p>
-Next: <a href="#strip" accesskey="n" rel="next">strip</a>, Previous: <a href="#size" accesskey="p" rel="previous">size</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#strip" accesskey="n" rel="next">strip</a>, Previous: <a href="#size" accesskey="p" rel="prev">size</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="strings-1"></a>
-<h2 class="chapter">7 strings</h2>
-<a name="index-strings"></a>
-<a name="index-listings-strings"></a>
-<a name="index-printing-strings"></a>
-<a name="index-strings_002c-printing"></a>
+<span id="strings-1"></span><h2 class="chapter">7 strings</h2>
+<span id="index-strings"></span>
+<span id="index-listings-strings"></span>
+<span id="index-printing-strings"></span>
+<span id="index-strings_002c-printing"></span>
 
 
-<div class="smallexample">
-<pre class="smallexample">strings [<samp>-afovV</samp>] [<samp>-</samp><var>min-len</var>]
+<div class="example">
+<pre class="example">strings [<samp>-afovV</samp>] [<samp>-</samp><var>min-len</var>]
         [<samp>-n</samp> <var>min-len</var>] [<samp>--bytes=</samp><var>min-len</var>]
         [<samp>-t</samp> <var>radix</var>] [<samp>--radix=</samp><var>radix</var>]
         [<samp>-e</samp> <var>encoding</var>] [<samp>--encoding=</samp><var>encoding</var>]
@@ -3884,7 +3853,7 @@ where they might not be expected.
 </dd>
 <dt><code>-T <var>bfdname</var></code></dt>
 <dt><code>--target=<var>bfdname</var></code></dt>
-<dd><a name="index-object-code-format-3"></a>
+<dd><span id="index-object-code-format-3"></span>
 <p>Specify an object code format other than your system&rsquo;s default format.
 See <a href="#Target-Selection">Target Selection</a>, for more information.
 </p>
@@ -3915,22 +3884,20 @@ may contain new-lines internally.
 
 
 <hr>
-<a name="strip"></a>
-<div class="header">
+<span id="strip"></span><div class="header">
 <p>
-Next: <a href="#c_002b_002bfilt" accesskey="n" rel="next">c++filt</a>, Previous: <a href="#strings" accesskey="p" rel="previous">strings</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#c_002b_002bfilt" accesskey="n" rel="next">c++filt</a>, Previous: <a href="#strings" accesskey="p" rel="prev">strings</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="strip-1"></a>
-<h2 class="chapter">8 strip</h2>
+<span id="strip-1"></span><h2 class="chapter">8 strip</h2>
 
-<a name="index-strip"></a>
-<a name="index-removing-symbols"></a>
-<a name="index-discarding-symbols"></a>
-<a name="index-symbols_002c-discarding"></a>
+<span id="index-strip"></span>
+<span id="index-removing-symbols"></span>
+<span id="index-discarding-symbols"></span>
+<span id="index-symbols_002c-discarding"></span>
 
 
-<div class="smallexample">
-<pre class="smallexample">strip [<samp>-F</samp> <var>bfdname</var> |<samp>--target=</samp><var>bfdname</var>]
+<div class="example">
+<pre class="example">strip [<samp>-F</samp> <var>bfdname</var> |<samp>--target=</samp><var>bfdname</var>]
       [<samp>-I</samp> <var>bfdname</var> |<samp>--input-target=</samp><var>bfdname</var>]
       [<samp>-O</samp> <var>bfdname</var> |<samp>--output-target=</samp><var>bfdname</var>]
       [<samp>-s</samp>|<samp>--strip-all</samp>]
@@ -4008,8 +3975,8 @@ point (!) then matching sections will not be removed even if an
 earlier use of <samp>--remove-section</samp> on the same command line
 would otherwise remove it.  For example:
 </p>
-<div class="smallexample">
-<pre class="smallexample">  --remove-section=.text.* --remove-section=!.text.foo
+<div class="example">
+<pre class="example">  --remove-section=.text.* --remove-section=!.text.foo
 </pre></div>
 
 <p>will remove all sections matching the pattern &rsquo;.text.*&rsquo;, but will not
@@ -4028,8 +3995,8 @@ that using this option inappropriately may make the output file
 unusable.  Wildcard characters are accepted in <var>sectionpattern</var>.
 For example:
 </p>
-<div class="smallexample">
-<pre class="smallexample">  --remove-relocations=.text.*
+<div class="example">
+<pre class="example">  --remove-relocations=.text.*
 </pre></div>
 
 <p>will remove the relocations for all sections matching the patter
@@ -4041,8 +4008,8 @@ removed even if an earlier use of <samp>--remove-relocations</samp> on the
 same command line would otherwise cause the relocations to be removed.
 For example:
 </p>
-<div class="smallexample">
-<pre class="smallexample">  --remove-relocations=.text.* --remove-relocations=!.text.foo
+<div class="example">
+<pre class="example">  --remove-relocations=.text.* --remove-relocations=!.text.foo
 </pre></div>
 
 <p>will remove all relocations for sections matching the pattern
@@ -4109,8 +4076,8 @@ argument may be specified.
 </dd>
 <dt><code>-D</code></dt>
 <dt><code>--enable-deterministic-archives</code></dt>
-<dd><a name="index-deterministic-archives-6"></a>
-<a name="index-_002d_002denable_002ddeterministic_002darchives-6"></a>
+<dd><span id="index-deterministic-archives-6"></span>
+<span id="index-_002d_002denable_002ddeterministic_002darchives-6"></span>
 <p>Operate in <em>deterministic</em> mode.  When copying archive members
 and writing the archive index, use zero for UIDs, GIDs, timestamps,
 and use consistent file modes for all files.
@@ -4122,8 +4089,8 @@ It can be disabled with the &lsquo;<samp>-U</samp>&rsquo; option, below.
 </dd>
 <dt><code>-U</code></dt>
 <dt><code>--disable-deterministic-archives</code></dt>
-<dd><a name="index-deterministic-archives-7"></a>
-<a name="index-_002d_002denable_002ddeterministic_002darchives-7"></a>
+<dd><span id="index-deterministic-archives-7"></span>
+<span id="index-_002d_002denable_002ddeterministic_002darchives-7"></span>
 <p>Do <em>not</em> operate in <em>deterministic</em> mode.  This is the
 inverse of the <samp>-D</samp> option, above: when copying archive members
 and writing the archive index, use their actual UID, GID, timestamp,
@@ -4142,8 +4109,8 @@ name.  If the first character of the symbol name is the exclamation
 point (!) then the sense of the switch is reversed for that symbol.
 For example:
 </p>
-<div class="smallexample">
-<pre class="smallexample">  -w -K !foo -K fo*
+<div class="example">
+<pre class="example">  -w -K !foo -K fo*
 </pre></div>
 
 <p>would cause strip to only keep symbols that start with the letters
@@ -4241,20 +4208,18 @@ archives, &lsquo;<samp>strip -v</samp>&rsquo; lists all members of the archive.
 
 
 <hr>
-<a name="c_002b_002bfilt"></a>
-<div class="header">
+<span id="c_002b_002bfilt"></span><div class="header">
 <p>
-Next: <a href="#addr2line" accesskey="n" rel="next">addr2line</a>, Previous: <a href="#strip" accesskey="p" rel="previous">strip</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#addr2line" accesskey="n" rel="next">addr2line</a>, Previous: <a href="#strip" accesskey="p" rel="prev">strip</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="c_002b_002bfilt-1"></a>
-<h2 class="chapter">9 c++filt</h2>
+<span id="c_002b_002bfilt-1"></span><h2 class="chapter">9 c++filt</h2>
 
-<a name="index-c_002b_002bfilt"></a>
-<a name="index-demangling-C_002b_002b-symbols"></a>
+<span id="index-c_002b_002bfilt"></span>
+<span id="index-demangling-C_002b_002b-symbols"></span>
 
 
-<div class="smallexample">
-<pre class="smallexample">c++filt [<samp>-_</samp>|<samp>--strip-underscore</samp>]
+<div class="example">
+<pre class="example">c++filt [<samp>-_</samp>|<samp>--strip-underscore</samp>]
         [<samp>-n</samp>|<samp>--no-strip-underscore</samp>]
         [<samp>-p</samp>|<samp>--no-params</samp>]
         [<samp>-t</samp>|<samp>--types</samp>]
@@ -4266,7 +4231,7 @@ Next: <a href="#addr2line" accesskey="n" rel="next">addr2line</a>, Previous: <a 
 </pre></div>
 
 
-<a name="index-cxxfilt"></a>
+<span id="index-cxxfilt"></span>
 <p>The C++ and Java languages provide function overloading, which means
 that you can write many functions with the same name, providing that
 each function takes parameters of different types.  In order to be
@@ -4274,7 +4239,7 @@ able to distinguish these similarly named functions C++ and Java
 encode them into a low-level assembler name which uniquely identifies
 each different version.  This process is known as <em>mangling</em>. The
 <code>c++filt</code>
-<a name="DOCF1" href="#FOOT1"><sup>1</sup></a>
+<a id="DOCF1" href="#FOOT1"><sup>1</sup></a>
 program does the inverse mapping: it decodes (<em>demangles</em>) low-level
 names into user-level names so that they can be read.
 </p>
@@ -4301,21 +4266,21 @@ command-line arguments are expected to be just mangled names and no
 checking is performed to separate them from surrounding text.  Thus
 for example:
 </p>
-<div class="smallexample">
-<pre class="smallexample">c++filt -n _Z1fv
+<div class="example">
+<pre class="example">c++filt -n _Z1fv
 </pre></div>
 
 <p>will work and demangle the name to &ldquo;f()&rdquo; whereas:
 </p>
-<div class="smallexample">
-<pre class="smallexample">c++filt -n _Z1fv,
+<div class="example">
+<pre class="example">c++filt -n _Z1fv,
 </pre></div>
 
 <p>will not work.  (Note the extra comma at the end of the mangled
 name which makes it invalid).  This command however will work:
 </p>
-<div class="smallexample">
-<pre class="smallexample">echo _Z1fv, | c++filt -n
+<div class="example">
+<pre class="example">echo _Z1fv, | c++filt -n
 </pre></div>
 
 <p>and will display &ldquo;f(),&rdquo;, i.e., the demangled name followed by a
@@ -4324,8 +4289,8 @@ from the standard input it is expected that they might be part of an
 assembler source file where there might be extra, extraneous
 characters trailing after a mangled name.  For example:
 </p>
-<div class="smallexample">
-<pre class="smallexample">    .type   _Z1fv, @function
+<div class="example">
+<pre class="example">    .type   _Z1fv, @function
 </pre></div>
 
 
@@ -4454,20 +4419,18 @@ passed as an argument on the command line; in other words,
 </blockquote>
 
 <hr>
-<a name="addr2line"></a>
-<div class="header">
+<span id="addr2line"></span><div class="header">
 <p>
-Next: <a href="#windmc" accesskey="n" rel="next">windmc</a>, Previous: <a href="#c_002b_002bfilt" accesskey="p" rel="previous">c++filt</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#windmc" accesskey="n" rel="next">windmc</a>, Previous: <a href="#c_002b_002bfilt" accesskey="p" rel="prev">c++filt</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="addr2line-1"></a>
-<h2 class="chapter">10 addr2line</h2>
+<span id="addr2line-1"></span><h2 class="chapter">10 addr2line</h2>
 
-<a name="index-addr2line"></a>
-<a name="index-address-to-file-name-and-line-number"></a>
+<span id="index-addr2line"></span>
+<span id="index-address-to-file-name-and-line-number"></span>
 
 
-<div class="smallexample">
-<pre class="smallexample">addr2line [<samp>-a</samp>|<samp>--addresses</samp>]
+<div class="example">
+<pre class="example">addr2line [<samp>-a</samp>|<samp>--addresses</samp>]
           [<samp>-b</samp> <var>bfdname</var>|<samp>--target=</samp><var>bfdname</var>]
           [<samp>-C</samp>|<samp>--demangle</samp>[=<var>style</var>]]
           [<samp>-r</samp>|<samp>--no-recurse-limit</samp>]
@@ -4553,14 +4516,14 @@ identify it.
 </dd>
 <dt><code>-b <var>bfdname</var></code></dt>
 <dt><code>--target=<var>bfdname</var></code></dt>
-<dd><a name="index-object-code-format-4"></a>
+<dd><span id="index-object-code-format-4"></span>
 <p>Specify that the object-code format for the object files is
 <var>bfdname</var>.
 </p>
 </dd>
 <dt><code>-C</code></dt>
 <dt><code>--demangle[=<var>style</var>]</code></dt>
-<dd><a name="index-demangling-in-objdump-1"></a>
+<dd><span id="index-demangling-in-objdump-1"></span>
 <p>Decode (<em>demangle</em>) low-level symbol names into user-level names.
 Besides removing any initial underscore prepended by the system, this
 makes C++ function names readable.  Different compilers have different
@@ -4638,13 +4601,11 @@ synonym for the <samp>--recurse-limit</samp> option.
 
 
 <hr>
-<a name="windmc"></a>
-<div class="header">
+<span id="windmc"></span><div class="header">
 <p>
-Next: <a href="#windres" accesskey="n" rel="next">windres</a>, Previous: <a href="#addr2line" accesskey="p" rel="previous">addr2line</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#windres" accesskey="n" rel="next">windres</a>, Previous: <a href="#addr2line" accesskey="p" rel="prev">addr2line</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="windmc-1"></a>
-<h2 class="chapter">11 windmc</h2>
+<span id="windmc-1"></span><h2 class="chapter">11 windmc</h2>
 
 <p><code>windmc</code> may be used to generator Windows message resources.
 </p>
@@ -4654,8 +4615,8 @@ utilities, since it is only useful for Windows targets.
 </p></blockquote>
 
 
-<div class="smallexample">
-<pre class="smallexample">windmc [options] input-file
+<div class="example">
+<pre class="example">windmc [options] input-file
 </pre></div>
 
 
@@ -4815,13 +4776,11 @@ symbolic name. No such file is generated without specifying the switch.
 
 
 <hr>
-<a name="windres"></a>
-<div class="header">
+<span id="windres"></span><div class="header">
 <p>
-Next: <a href="#dlltool" accesskey="n" rel="next">dlltool</a>, Previous: <a href="#windmc" accesskey="p" rel="previous">windmc</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#dlltool" accesskey="n" rel="next">dlltool</a>, Previous: <a href="#windmc" accesskey="p" rel="prev">windmc</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="windres-1"></a>
-<h2 class="chapter">12 windres</h2>
+<span id="windres-1"></span><h2 class="chapter">12 windres</h2>
 
 <p><code>windres</code> may be used to manipulate Windows resources.
 </p>
@@ -4831,8 +4790,8 @@ utilities, since it is only useful for Windows targets.
 </p></blockquote>
 
 
-<div class="smallexample">
-<pre class="smallexample">windres [options] [input-file] [output-file]
+<div class="example">
+<pre class="example">windres [options] [input-file] [output-file]
 </pre></div>
 
 
@@ -5027,15 +4986,13 @@ this will turn on parser debugging.
 
 
 <hr>
-<a name="dlltool"></a>
-<div class="header">
+<span id="dlltool"></span><div class="header">
 <p>
-Next: <a href="#readelf" accesskey="n" rel="next">readelf</a>, Previous: <a href="#windres" accesskey="p" rel="previous">windres</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#readelf" accesskey="n" rel="next">readelf</a>, Previous: <a href="#windres" accesskey="p" rel="prev">windres</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="dlltool-1"></a>
-<h2 class="chapter">13 dlltool</h2>
-<a name="index-DLL"></a>
-<a name="index-dlltool"></a>
+<span id="dlltool-1"></span><h2 class="chapter">13 dlltool</h2>
+<span id="index-DLL"></span>
+<span id="index-dlltool"></span>
 
 <p><code>dlltool</code> is used to create the files needed to create dynamic
 link libraries (DLLs) on systems which understand PE format image
@@ -5055,8 +5012,8 @@ support DLLs.
 </p></blockquote>
 
 
-<div class="smallexample">
-<pre class="smallexample">dlltool [<samp>-d</samp>|<samp>--input-def</samp> <var>def-file-name</var>]
+<div class="example">
+<pre class="example">dlltool [<samp>-d</samp>|<samp>--input-def</samp> <var>def-file-name</var>]
         [<samp>-b</samp>|<samp>--base-file</samp> <var>base-file-name</var>]
         [<samp>-e</samp>|<samp>--output-exp</samp> <var>exports-file-name</var>]
         [<samp>-z</samp>|<samp>--output-def</samp> <var>def-file-name</var>]
@@ -5110,8 +5067,8 @@ have an <samp>-export:&lt;name_of_function&gt;</samp> entry in the &lsquo;<samp>
 section of the object file.  This can be done in C by using the
 asm() operator:
 </p>
-<div class="smallexample">
-<pre class="smallexample">  asm (&quot;.section .drectve&quot;);
+<div class="example">
+<pre class="example">  asm (&quot;.section .drectve&quot;);
   asm (&quot;.ascii \&quot;-export:my_func\&quot;&quot;);
 
   int my_func (void) { &hellip; }
@@ -5149,8 +5106,8 @@ temporary object files it used to build the library.
 also creating a program (from an object file called &lsquo;<samp>program.o</samp>&rsquo;)
 that uses that DLL:
 </p>
-<div class="smallexample">
-<pre class="smallexample">  gcc -c dll.c
+<div class="example">
+<pre class="example">  gcc -c dll.c
   dlltool -e exports.o -l dll.lib dll.o
   gcc dll.o exports.o -o dll.dll
   gcc program.o dll.lib -o program
@@ -5168,13 +5125,13 @@ description of the <samp>-I</samp> or <samp>--identify</samp> option.
 <dl compact="compact">
 <dt><code>-d <var>filename</var></code></dt>
 <dt><code>--input-def <var>filename</var></code></dt>
-<dd><a name="index-input-_002edef-file"></a>
+<dd><span id="index-input-_002edef-file"></span>
 <p>Specifies the name of a <samp>.def</samp> file to be read in and processed.
 </p>
 </dd>
 <dt><code>-b <var>filename</var></code></dt>
 <dt><code>--base-file <var>filename</var></code></dt>
-<dd><a name="index-base-files"></a>
+<dd><span id="index-base-files"></span>
 <p>Specifies the name of a base file to be read in and processed.  The
 contents of this file will be added to the relocation section in the
 exports file generated by dlltool.
@@ -5406,18 +5363,16 @@ is generated from the pid.
 
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="#def-file-format" accesskey="1">def file format</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">The format of the dlltool <samp>.def</samp> file
+<tr><td align="left" valign="top">&bull; <a href="#def-file-format" accesskey="1">def file format</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">The format of the dlltool <samp>.def</samp> file
 </td></tr>
 </table>
 
 <hr>
-<a name="def-file-format"></a>
-<div class="header">
+<span id="def-file-format"></span><div class="header">
 <p>
 Up: <a href="#dlltool" accesskey="u" rel="up">dlltool</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="The-format-of-the-dlltool-_002edef-file"></a>
-<h3 class="section">13.1 The format of the <code>dlltool</code> <samp>.def</samp> file</h3>
+<span id="The-format-of-the-dlltool-_002edef-file"></span><h3 class="section">13.1 The format of the <code>dlltool</code> <samp>.def</samp> file</h3>
 
 <p>A <samp>.def</samp> file contains any number of the following commands:
 </p>
@@ -5482,20 +5437,18 @@ this and act upon it.
 
 
 <hr>
-<a name="readelf"></a>
-<div class="header">
+<span id="readelf"></span><div class="header">
 <p>
-Next: <a href="#elfedit" accesskey="n" rel="next">elfedit</a>, Previous: <a href="#dlltool" accesskey="p" rel="previous">dlltool</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#elfedit" accesskey="n" rel="next">elfedit</a>, Previous: <a href="#dlltool" accesskey="p" rel="prev">dlltool</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="readelf-1"></a>
-<h2 class="chapter">14 readelf</h2>
+<span id="readelf-1"></span><h2 class="chapter">14 readelf</h2>
 
-<a name="index-ELF-file-information"></a>
-<a name="index-readelf"></a>
+<span id="index-ELF-file-information"></span>
+<span id="index-readelf"></span>
 
 
-<div class="smallexample">
-<pre class="smallexample">readelf [<samp>-a</samp>|<samp>--all</samp>]
+<div class="example">
+<pre class="example">readelf [<samp>-a</samp>|<samp>--all</samp>]
         [<samp>-h</samp>|<samp>--file-header</samp>]
         [<samp>-l</samp>|<samp>--program-headers</samp>|<samp>--segments</samp>]
         [<samp>-S</samp>|<samp>--section-headers</samp>|<samp>--sections</samp>]
@@ -5578,7 +5531,7 @@ and dynamic relocs will not be displayed.
 </dd>
 <dt><code>-h</code></dt>
 <dt><code>--file-header</code></dt>
-<dd><a name="index-ELF-file-header-information"></a>
+<dd><span id="index-ELF-file-header-information"></span>
 <p>Displays the information contained in the ELF header at the start of the
 file.
 </p>
@@ -5586,42 +5539,42 @@ file.
 <dt><code>-l</code></dt>
 <dt><code>--program-headers</code></dt>
 <dt><code>--segments</code></dt>
-<dd><a name="index-ELF-program-header-information"></a>
-<a name="index-ELF-segment-information"></a>
+<dd><span id="index-ELF-program-header-information"></span>
+<span id="index-ELF-segment-information"></span>
 <p>Displays the information contained in the file&rsquo;s segment headers, if it
 has any.
 </p>
 </dd>
 <dt><code>--quiet</code></dt>
-<dd><a name="index-quiet"></a>
+<dd><span id="index-quiet"></span>
 <p>Suppress &quot;no symbols&quot; diagnostic.
 </p>
 </dd>
 <dt><code>-S</code></dt>
 <dt><code>--sections</code></dt>
 <dt><code>--section-headers</code></dt>
-<dd><a name="index-ELF-section-information"></a>
+<dd><span id="index-ELF-section-information"></span>
 <p>Displays the information contained in the file&rsquo;s section headers, if it
 has any.
 </p>
 </dd>
 <dt><code>-g</code></dt>
 <dt><code>--section-groups</code></dt>
-<dd><a name="index-ELF-section-group-information"></a>
+<dd><span id="index-ELF-section-group-information"></span>
 <p>Displays the information contained in the file&rsquo;s section groups, if it
 has any.
 </p>
 </dd>
 <dt><code>-t</code></dt>
 <dt><code>--section-details</code></dt>
-<dd><a name="index-ELF-section-information-1"></a>
+<dd><span id="index-ELF-section-information-1"></span>
 <p>Displays the detailed section information. Implies <samp>-S</samp>.
 </p>
 </dd>
 <dt><code>-s</code></dt>
 <dt><code>--symbols</code></dt>
 <dt><code>--syms</code></dt>
-<dd><a name="index-ELF-symbol-table-information"></a>
+<dd><span id="index-ELF-symbol-table-information"></span>
 <p>Displays the entries in symbol table section of the file, if it has one.
 If a symbol has version information associated with it then this is
 displayed as well.  The version string is displayed as a suffix to the
@@ -5633,19 +5586,19 @@ displayed as a suffix preceded by two @ characters.  For example
 </p>
 </dd>
 <dt><code>--dyn-syms</code></dt>
-<dd><a name="index-ELF-dynamic-symbol-table-information"></a>
+<dd><span id="index-ELF-dynamic-symbol-table-information"></span>
 <p>Displays the entries in dynamic symbol table section of the file, if it
 has one.  The output format is the same as the format used by the
 <samp>--syms</samp> option.
 </p>
 </dd>
 <dt><code>--lto-syms</code></dt>
-<dd><a name="index-LTO-symbol-table"></a>
+<dd><span id="index-LTO-symbol-table"></span>
 <p>Displays the contents of any LTO symbol tables in the file.
 </p>
 </dd>
 <dt><code>--sym-base=[0|8|10|16]</code></dt>
-<dd><a name="index-symbol-table-size-base"></a>
+<dd><span id="index-symbol-table-size-base"></span>
 <p>Forces the size field of the symbol table to use the given base.  Any
 unrecognized options will be treated as &lsquo;<samp>0</samp>&rsquo;.  <samp>--sym-base=0</samp>
 represents the default and legacy behaviour.  This will output sizes as decimal
@@ -5659,7 +5612,7 @@ will be used with a 0x prefix.
 </dd>
 <dt><code>-C</code></dt>
 <dt><code>--demangle[=<var>style</var>]</code></dt>
-<dd><a name="index-demangling-in-nm-1"></a>
+<dd><span id="index-demangling-in-nm-1"></span>
 <p>Decode (<em>demangle</em>) low-level symbol names into user-level names.
 This makes C++ function names readable.  Different compilers have
 different mangling styles.  The optional demangling style argument can
@@ -5718,19 +5671,19 @@ sequences when they might not be expected.
 </dd>
 <dt><code>-n</code></dt>
 <dt><code>--notes</code></dt>
-<dd><a name="index-ELF-notes"></a>
+<dd><span id="index-ELF-notes"></span>
 <p>Displays the contents of the NOTE segments and/or sections, if any.
 </p>
 </dd>
 <dt><code>-r</code></dt>
 <dt><code>--relocs</code></dt>
-<dd><a name="index-ELF-reloc-information"></a>
+<dd><span id="index-ELF-reloc-information"></span>
 <p>Displays the contents of the file&rsquo;s relocation section, if it has one.
 </p>
 </dd>
 <dt><code>-u</code></dt>
 <dt><code>--unwind</code></dt>
-<dd><a name="index-unwind-information"></a>
+<dd><span id="index-unwind-information"></span>
 <p>Displays the contents of the file&rsquo;s unwind section, if it has one.  Only
 the unwind sections for IA64 ELF files, as well as ARM unwind tables
 (<code>.ARM.exidx</code> / <code>.ARM.extab</code>) are currently supported.  If
@@ -5742,13 +5695,13 @@ options.
 </dd>
 <dt><code>-d</code></dt>
 <dt><code>--dynamic</code></dt>
-<dd><a name="index-ELF-dynamic-section-information"></a>
+<dd><span id="index-ELF-dynamic-section-information"></span>
 <p>Displays the contents of the file&rsquo;s dynamic section, if it has one.
 </p>
 </dd>
 <dt><code>-V</code></dt>
 <dt><code>--version-info</code></dt>
-<dd><a name="index-ELF-version-sections-information"></a>
+<dd><span id="index-ELF-version-sections-information"></span>
 <p>Displays the contents of the version sections in the file, it they
 exist.
 </p>
@@ -5811,7 +5764,7 @@ section(s) are not compressed then they are displayed as is.
 </dd>
 <dt><code>-c</code></dt>
 <dt><code>--archive-index</code></dt>
-<dd><a name="index-Archive-file-symbol-index-information"></a>
+<dd><span id="index-Archive-file-symbol-index-information"></span>
 <p>Displays the file symbol index information contained in the header part
 of binary archives.  Performs the same function as the <samp>t</samp>
 command to <code>ar</code>, but without using the BFD library.  See <a href="#ar">ar</a>.
@@ -6030,8 +5983,8 @@ command line options will be displayed.
 
 </dd>
 <dt><code>--ctf[=<var>section</var>]</code></dt>
-<dd><a name="index-CTF-1"></a>
-<a name="index-Compact-Type-Format-1"></a>
+<dd><span id="index-CTF-1"></span>
+<span id="index-Compact-Type-Format-1"></span>
 
 <p>Display the contents of the specified CTF section.  CTF sections themselves
 contain many subsections, all of which are displayed in order.
@@ -6102,20 +6055,18 @@ displayed and restoring the old behaviour of readelf (prior to release
 
 
 <hr>
-<a name="elfedit"></a>
-<div class="header">
+<span id="elfedit"></span><div class="header">
 <p>
-Next: <a href="#Common-Options" accesskey="n" rel="next">Common Options</a>, Previous: <a href="#readelf" accesskey="p" rel="previous">readelf</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#Common-Options" accesskey="n" rel="next">Common Options</a>, Previous: <a href="#readelf" accesskey="p" rel="prev">readelf</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="elfedit-1"></a>
-<h2 class="chapter">15 elfedit</h2>
+<span id="elfedit-1"></span><h2 class="chapter">15 elfedit</h2>
 
-<a name="index-Update-ELF-header"></a>
-<a name="index-elfedit"></a>
+<span id="index-Update-ELF-header"></span>
+<span id="index-elfedit"></span>
 
 
-<div class="smallexample">
-<pre class="smallexample">elfedit [<samp>--input-mach=</samp><var>machine</var>]
+<div class="example">
+<pre class="example">elfedit [<samp>--input-mach=</samp><var>machine</var>]
         [<samp>--input-type=</samp><var>type</var>]
         [<samp>--input-osabi=</samp><var>osabi</var>]
         [<samp>--input-abiversion=</samp><var>version</var>]
@@ -6232,13 +6183,11 @@ are available only on hosts with &lsquo;<samp>mmap</samp>&rsquo; support.
 
 
 <hr>
-<a name="Common-Options"></a>
-<div class="header">
+<span id="Common-Options"></span><div class="header">
 <p>
-Next: <a href="#Selecting-the-Target-System" accesskey="n" rel="next">Selecting the Target System</a>, Previous: <a href="#elfedit" accesskey="p" rel="previous">elfedit</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#Selecting-the-Target-System" accesskey="n" rel="next">Selecting the Target System</a>, Previous: <a href="#elfedit" accesskey="p" rel="prev">elfedit</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="Common-Options-1"></a>
-<h2 class="chapter">16 Common Options</h2>
+<span id="Common-Options-1"></span><h2 class="chapter">16 Common Options</h2>
 
 <p>The following command-line options are supported by all of the
 programs described in this manual.
@@ -6269,13 +6218,11 @@ with a backslash.  The <var>file</var> may itself contain additional
 </dl>
 
 <hr>
-<a name="Selecting-the-Target-System"></a>
-<div class="header">
+<span id="Selecting-the-Target-System"></span><div class="header">
 <p>
-Next: <a href="#debuginfod" accesskey="n" rel="next">debuginfod</a>, Previous: <a href="#Common-Options" accesskey="p" rel="previous">Common Options</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#debuginfod" accesskey="n" rel="next">debuginfod</a>, Previous: <a href="#Common-Options" accesskey="p" rel="prev">Common Options</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="Selecting-the-Target-System-1"></a>
-<h2 class="chapter">17 Selecting the Target System</h2>
+<span id="Selecting-the-Target-System-1"></span><h2 class="chapter">17 Selecting the Target System</h2>
 
 <p>You can specify two aspects of the target system to the <small>GNU</small>
 binary file utilities, each in several ways:
@@ -6298,20 +6245,18 @@ once because some of them can only be configured <em>native</em> (on hosts
 with the same type as the target system).
 </p>
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="#Target-Selection" accesskey="1">Target Selection</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top">&bull; <a href="#Target-Selection" accesskey="1">Target Selection</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#Architecture-Selection" accesskey="2">Architecture Selection</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top">&bull; <a href="#Architecture-Selection" accesskey="2">Architecture Selection</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <hr>
-<a name="Target-Selection"></a>
-<div class="header">
+<span id="Target-Selection"></span><div class="header">
 <p>
 Next: <a href="#Architecture-Selection" accesskey="n" rel="next">Architecture Selection</a>, Up: <a href="#Selecting-the-Target-System" accesskey="u" rel="up">Selecting the Target System</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="Target-Selection-1"></a>
-<h3 class="section">17.1 Target Selection</h3>
+<span id="Target-Selection-1"></span><h3 class="section">17.1 Target Selection</h3>
 
 <p>A <em>target</em> is an object file format.  A given target may be
 supported for multiple architectures (see <a href="#Architecture-Selection">Architecture Selection</a>).
@@ -6334,8 +6279,7 @@ sources.
 <p>Some sample configuration triplets are: &lsquo;<samp>m68k-hp-bsd</samp>&rsquo;,
 &lsquo;<samp>mips-dec-ultrix</samp>&rsquo;, &lsquo;<samp>sparc-sun-sunos</samp>&rsquo;.
 </p>
-<a name="objdump-Target"></a>
-<h4 class="subheading"><code>objdump</code> Target</h4>
+<span id="objdump-Target"></span><h4 class="subheading"><code>objdump</code> Target</h4>
 
 <p>Ways to specify:
 </p>
@@ -6347,8 +6291,7 @@ sources.
 </li><li> deduced from the input file
 </li></ol>
 
-<a name="objcopy-and-strip-Input-Target"></a>
-<h4 class="subheading"><code>objcopy</code> and <code>strip</code> Input Target</h4>
+<span id="objcopy-and-strip-Input-Target"></span><h4 class="subheading"><code>objcopy</code> and <code>strip</code> Input Target</h4>
 
 <p>Ways to specify:
 </p>
@@ -6360,8 +6303,7 @@ sources.
 </li><li> deduced from the input file
 </li></ol>
 
-<a name="objcopy-and-strip-Output-Target"></a>
-<h4 class="subheading"><code>objcopy</code> and <code>strip</code> Output Target</h4>
+<span id="objcopy-and-strip-Output-Target"></span><h4 class="subheading"><code>objcopy</code> and <code>strip</code> Output Target</h4>
 
 <p>Ways to specify:
 </p>
@@ -6375,8 +6317,7 @@ sources.
 </li><li> deduced from the input file
 </li></ol>
 
-<a name="nm_002c-size_002c-and-strings-Target"></a>
-<h4 class="subheading"><code>nm</code>, <code>size</code>, and <code>strings</code> Target</h4>
+<span id="nm_002c-size_002c-and-strings-Target"></span><h4 class="subheading"><code>nm</code>, <code>size</code>, and <code>strings</code> Target</h4>
 
 <p>Ways to specify:
 </p>
@@ -6389,13 +6330,11 @@ sources.
 </li></ol>
 
 <hr>
-<a name="Architecture-Selection"></a>
-<div class="header">
+<span id="Architecture-Selection"></span><div class="header">
 <p>
-Previous: <a href="#Target-Selection" accesskey="p" rel="previous">Target Selection</a>, Up: <a href="#Selecting-the-Target-System" accesskey="u" rel="up">Selecting the Target System</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Previous: <a href="#Target-Selection" accesskey="p" rel="prev">Target Selection</a>, Up: <a href="#Selecting-the-Target-System" accesskey="u" rel="up">Selecting the Target System</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="Architecture-Selection-1"></a>
-<h3 class="section">17.2 Architecture Selection</h3>
+<span id="Architecture-Selection-1"></span><h3 class="section">17.2 Architecture Selection</h3>
 
 <p>An <em>architecture</em> is a type of <small>CPU</small> on which an object file is
 to run.  Its name may contain a colon, separating the name of the
@@ -6406,8 +6345,7 @@ second column contains the relevant information).
 </p>
 <p>Sample values: &lsquo;<samp>m68k:68020</samp>&rsquo;, &lsquo;<samp>mips:3000</samp>&rsquo;, &lsquo;<samp>sparc</samp>&rsquo;.
 </p>
-<a name="objdump-Architecture"></a>
-<h4 class="subheading"><code>objdump</code> Architecture</h4>
+<span id="objdump-Architecture"></span><h4 class="subheading"><code>objdump</code> Architecture</h4>
 
 <p>Ways to specify:
 </p>
@@ -6417,8 +6355,7 @@ second column contains the relevant information).
 </li><li> deduced from the input file
 </li></ol>
 
-<a name="objcopy_002c-nm_002c-size_002c-strings-Architecture"></a>
-<h4 class="subheading"><code>objcopy</code>, <code>nm</code>, <code>size</code>, <code>strings</code> Architecture</h4>
+<span id="objcopy_002c-nm_002c-size_002c-strings-Architecture"></span><h4 class="subheading"><code>objcopy</code>, <code>nm</code>, <code>size</code>, <code>strings</code> Architecture</h4>
 
 <p>Ways to specify:
 </p>
@@ -6427,14 +6364,12 @@ second column contains the relevant information).
 </li></ol>
 
 <hr>
-<a name="debuginfod"></a>
-<div class="header">
+<span id="debuginfod"></span><div class="header">
 <p>
-Next: <a href="#Reporting-Bugs" accesskey="n" rel="next">Reporting Bugs</a>, Previous: <a href="#Selecting-the-Target-System" accesskey="p" rel="previous">Selecting the Target System</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#Reporting-Bugs" accesskey="n" rel="next">Reporting Bugs</a>, Previous: <a href="#Selecting-the-Target-System" accesskey="p" rel="prev">Selecting the Target System</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="debuginfod-1"></a>
-<h2 class="chapter">18 debuginfod</h2>
-<a name="index-separate-debug-files"></a>
+<span id="debuginfod-1"></span><h2 class="chapter">18 debuginfod</h2>
+<span id="index-separate-debug-files"></span>
 
 <p>debuginfod is a web service that indexes ELF/DWARF debugging resources
 by build-id and serves them over HTTP.  For more information see:
@@ -6455,15 +6390,13 @@ have options to control when they should access the debuginfod
 servers.  By default this access is enabled.
 </p>
 <hr>
-<a name="Reporting-Bugs"></a>
-<div class="header">
+<span id="Reporting-Bugs"></span><div class="header">
 <p>
-Next: <a href="#GNU-Free-Documentation-License" accesskey="n" rel="next">GNU Free Documentation License</a>, Previous: <a href="#debuginfod" accesskey="p" rel="previous">debuginfod</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#GNU-Free-Documentation-License" accesskey="n" rel="next">GNU Free Documentation License</a>, Previous: <a href="#debuginfod" accesskey="p" rel="prev">debuginfod</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="Reporting-Bugs-1"></a>
-<h2 class="chapter">19 Reporting Bugs</h2>
-<a name="index-bugs"></a>
-<a name="index-reporting-bugs"></a>
+<span id="Reporting-Bugs-1"></span><h2 class="chapter">19 Reporting Bugs</h2>
+<span id="index-bugs"></span>
+<span id="index-reporting-bugs"></span>
 
 <p>Your bug reports play an essential role in making the binary utilities
 reliable.
@@ -6478,31 +6411,29 @@ maintenance.
 information that enables us to fix the bug.
 </p>
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="#Bug-Criteria" accesskey="1">Bug Criteria</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Have you found a bug?
+<tr><td align="left" valign="top">&bull; <a href="#Bug-Criteria" accesskey="1">Bug Criteria</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Have you found a bug?
 </td></tr>
-<tr><td align="left" valign="top">&bull; <a href="#Bug-Reporting" accesskey="2">Bug Reporting</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">How to report bugs
+<tr><td align="left" valign="top">&bull; <a href="#Bug-Reporting" accesskey="2">Bug Reporting</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">How to report bugs
 </td></tr>
 </table>
 
 <hr>
-<a name="Bug-Criteria"></a>
-<div class="header">
+<span id="Bug-Criteria"></span><div class="header">
 <p>
 Next: <a href="#Bug-Reporting" accesskey="n" rel="next">Bug Reporting</a>, Up: <a href="#Reporting-Bugs" accesskey="u" rel="up">Reporting Bugs</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="Have-You-Found-a-Bug_003f"></a>
-<h3 class="section">19.1 Have You Found a Bug?</h3>
-<a name="index-bug-criteria"></a>
+<span id="Have-You-Found-a-Bug_003f"></span><h3 class="section">19.1 Have You Found a Bug?</h3>
+<span id="index-bug-criteria"></span>
 
 <p>If you are not sure whether you have found a bug, here are some guidelines:
 </p>
 <ul>
-<li> <a name="index-fatal-signal"></a>
-<a name="index-crash"></a>
+<li> <span id="index-fatal-signal"></span>
+<span id="index-crash"></span>
 If a binary utility gets a fatal signal, for any input whatever, that is
 a bug.  Reliable utilities never crash.
 
-</li><li> <a name="index-error-on-valid-input"></a>
+</li><li> <span id="index-error-on-valid-input"></span>
 If a binary utility produces an error message for valid input, that is a
 bug.
 
@@ -6511,15 +6442,13 @@ improvement are welcome in any case.
 </li></ul>
 
 <hr>
-<a name="Bug-Reporting"></a>
-<div class="header">
+<span id="Bug-Reporting"></span><div class="header">
 <p>
-Previous: <a href="#Bug-Criteria" accesskey="p" rel="previous">Bug Criteria</a>, Up: <a href="#Reporting-Bugs" accesskey="u" rel="up">Reporting Bugs</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Previous: <a href="#Bug-Criteria" accesskey="p" rel="prev">Bug Criteria</a>, Up: <a href="#Reporting-Bugs" accesskey="u" rel="up">Reporting Bugs</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="How-to-Report-Bugs"></a>
-<h3 class="section">19.2 How to Report Bugs</h3>
-<a name="index-bug-reports"></a>
-<a name="index-bugs_002c-reporting"></a>
+<span id="How-to-Report-Bugs"></span><h3 class="section">19.2 How to Report Bugs</h3>
+<span id="index-bug-reports"></span>
+<span id="index-bugs_002c-reporting"></span>
 
 <p>A number of companies and individuals offer support for <small>GNU</small>
 products.  If you obtained the binary utilities from a support
@@ -6530,7 +6459,7 @@ individuals in the file <samp>etc/SERVICE</samp> in the <small>GNU</small> Emacs
 distribution.
 </p>
 <p>In any event, we also recommend that you send bug reports for the binary
-utilities to <a href="https://bugs.linaro.org/">https://bugs.linaro.org/</a>.
+utilities to <a href="https://sourceware.org/bugzilla/">https://sourceware.org/bugzilla/</a>.
 </p>
 <p>The fundamental principle of reporting bugs usefully is this:
 <strong>report all the facts</strong>.  If you are not sure whether to state a
@@ -6665,13 +6594,11 @@ things without first using the debugger to find the facts.
 </p></li></ul>
 
 <hr>
-<a name="GNU-Free-Documentation-License"></a>
-<div class="header">
+<span id="GNU-Free-Documentation-License"></span><div class="header">
 <p>
-Next: <a href="#Binutils-Index" accesskey="n" rel="next">Binutils Index</a>, Previous: <a href="#Reporting-Bugs" accesskey="p" rel="previous">Reporting Bugs</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Next: <a href="#Binutils-Index" accesskey="n" rel="next">Binutils Index</a>, Previous: <a href="#Reporting-Bugs" accesskey="p" rel="prev">Reporting Bugs</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="GNU-Free-Documentation-License-1"></a>
-<h2 class="appendix">Appendix A GNU Free Documentation License</h2>
+<span id="GNU-Free-Documentation-License-1"></span><h2 class="appendix">Appendix A GNU Free Documentation License</h2>
 
 <div align="center">Version 1.3, 3 November 2008
 </div>
@@ -6684,7 +6611,7 @@ Everyone is permitted to copy and distribute verbatim copies
 of this license document, but changing it is not allowed.
 </pre></div>
 
-<ol>
+<ol start="0">
 <li> PREAMBLE
 
 <p>The purpose of this License is to make a manual, textbook, or other
@@ -6860,7 +6787,7 @@ Version filling the role of the Document, thus licensing distribution
 and modification of the Modified Version to whoever possesses a copy
 of it.  In addition, you must do these things in the Modified Version:
 </p>
-<ol>
+<ol type="A" start="1">
 <li> Use in the Title Page (and on the covers, if any) a title distinct
 from that of the Document, and from those of previous versions
 (which should, if there were any, be listed in the History section
@@ -7106,15 +7033,14 @@ provided the MMC is eligible for relicensing.
 </p>
 </li></ol>
 
-<a name="ADDENDUM_003a-How-to-use-this-License-for-your-documents"></a>
-<h3 class="heading">ADDENDUM: How to use this License for your documents</h3>
+<span id="ADDENDUM_003a-How-to-use-this-License-for-your-documents"></span><h3 class="heading">ADDENDUM: How to use this License for your documents</h3>
 
 <p>To use this License in a document you have written, include a copy of
 the License in the document and put the following copyright and
 license notices just after the title page:
 </p>
-<div class="smallexample">
-<pre class="smallexample">  Copyright (C)  <var>year</var>  <var>your name</var>.
+<div class="example">
+<pre class="example">  Copyright (C)  <var>year</var>  <var>your name</var>.
   Permission is granted to copy, distribute and/or modify this document
   under the terms of the GNU Free Documentation License, Version 1.3
   or any later version published by the Free Software Foundation;
@@ -7126,8 +7052,8 @@ license notices just after the title page:
 <p>If you have Invariant Sections, Front-Cover Texts and Back-Cover Texts,
 replace the &ldquo;with&hellip;Texts.&rdquo; line with this:
 </p>
-<div class="smallexample">
-<pre class="smallexample">    with the Invariant Sections being <var>list their titles</var>, with
+<div class="example">
+<pre class="example">    with the Invariant Sections being <var>list their titles</var>, with
     the Front-Cover Texts being <var>list</var>, and with the Back-Cover Texts
     being <var>list</var>.
 </pre></div>
@@ -7144,13 +7070,11 @@ to permit their use in free software.
 
 
 <hr>
-<a name="Binutils-Index"></a>
-<div class="header">
+<span id="Binutils-Index"></span><div class="header">
 <p>
-Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="previous">GNU Free Documentation License</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
+Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="prev">GNU Free Documentation License</a>, Up: <a href="#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="#Binutils-Index" title="Index" rel="index">Index</a>]</p>
 </div>
-<a name="Binutils-Index-1"></a>
-<h2 class="unnumbered">Binutils Index</h2>
+<span id="Binutils-Index-1"></span><h2 class="unnumbered">Binutils Index</h2>
 
 <table><tr><th valign="top">Jump to: &nbsp; </th><td><a class="summary-letter" href="#Binutils-Index_cp_symbol-1"><b>-</b></a>
  &nbsp; 
@@ -7201,7 +7125,7 @@ Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="previous"
 <table class="index-cp" border="0">
 <tr><td></td><th align="left">Index Entry</th><td>&nbsp;</td><th align="left"> Section</th></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_symbol-1">-</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_symbol-1">-</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_002d_002denable_002ddeterministic_002darchives">&ndash;enable-deterministic-archives</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_002d_002denable_002ddeterministic_002darchives-1">&ndash;enable-deterministic-archives</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_002d_002denable_002ddeterministic_002darchives-2">&ndash;enable-deterministic-archives</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objcopy">objcopy</a></td></tr>
@@ -7211,10 +7135,10 @@ Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="previous"
 <tr><td></td><td valign="top"><a href="#index-_002d_002denable_002ddeterministic_002darchives-6">&ndash;enable-deterministic-archives</a>:</td><td>&nbsp;</td><td valign="top"><a href="#strip">strip</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_002d_002denable_002ddeterministic_002darchives-7">&ndash;enable-deterministic-archives</a>:</td><td>&nbsp;</td><td valign="top"><a href="#strip">strip</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_symbol-2">.</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_symbol-2">.</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_002estab">.stab</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objdump">objdump</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-A">A</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-A">A</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-Add-prefix-to-absolute-paths">Add prefix to absolute paths</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objdump">objdump</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-addr2line">addr2line</a>:</td><td>&nbsp;</td><td valign="top"><a href="#addr2line">addr2line</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-address-to-file-name-and-line-number">address to file name and line number</a>:</td><td>&nbsp;</td><td valign="top"><a href="#addr2line">addr2line</a></td></tr>
@@ -7228,14 +7152,14 @@ Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="previous"
 <tr><td></td><td valign="top"><a href="#index-archive-headers">archive headers</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objdump">objdump</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-archives">archives</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar">ar</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-B">B</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-B">B</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-base-files">base files</a>:</td><td>&nbsp;</td><td valign="top"><a href="#dlltool">dlltool</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-bug-criteria">bug criteria</a>:</td><td>&nbsp;</td><td valign="top"><a href="#Bug-Criteria">Bug Criteria</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-bug-reports">bug reports</a>:</td><td>&nbsp;</td><td valign="top"><a href="#Bug-Reporting">Bug Reporting</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-bugs">bugs</a>:</td><td>&nbsp;</td><td valign="top"><a href="#Reporting-Bugs">Reporting Bugs</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-bugs_002c-reporting">bugs, reporting</a>:</td><td>&nbsp;</td><td valign="top"><a href="#Bug-Reporting">Bug Reporting</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-C">C</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-C">C</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-c_002b_002bfilt">c++filt</a>:</td><td>&nbsp;</td><td valign="top"><a href="#c_002b_002bfilt">c++filt</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-changing-object-addresses">changing object addresses</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objcopy">objcopy</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-changing-section-address">changing section address</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objcopy">objcopy</a></td></tr>
@@ -7254,7 +7178,7 @@ Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="previous"
 <tr><td></td><td valign="top"><a href="#index-CTF-1">CTF</a>:</td><td>&nbsp;</td><td valign="top"><a href="#readelf">readelf</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-cxxfilt">cxxfilt</a>:</td><td>&nbsp;</td><td valign="top"><a href="#c_002b_002bfilt">c++filt</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-D">D</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-D">D</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-dates-in-archive">dates in archive</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-debug-symbols">debug symbols</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objdump">objdump</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-debugging-symbols">debugging symbols</a>:</td><td>&nbsp;</td><td valign="top"><a href="#nm">nm</a></td></tr>
@@ -7284,7 +7208,7 @@ Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="previous"
 <tr><td></td><td valign="top"><a href="#index-dynamic-symbol-table-entries_002c-printing">dynamic symbol table entries, printing</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objdump">objdump</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-dynamic-symbols">dynamic symbols</a>:</td><td>&nbsp;</td><td valign="top"><a href="#nm">nm</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-E">E</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-E">E</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-ELF-dynamic-section-information">ELF dynamic section information</a>:</td><td>&nbsp;</td><td valign="top"><a href="#readelf">readelf</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-ELF-dynamic-symbol-table-information">ELF dynamic symbol table information</a>:</td><td>&nbsp;</td><td valign="top"><a href="#readelf">readelf</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-ELF-file-header-information">ELF file header information</a>:</td><td>&nbsp;</td><td valign="top"><a href="#readelf">readelf</a></td></tr>
@@ -7307,29 +7231,29 @@ Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="previous"
 <tr><td></td><td valign="top"><a href="#index-external-symbols-2">external symbols</a>:</td><td>&nbsp;</td><td valign="top"><a href="#nm">nm</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-extract-from-archive">extract from archive</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-F">F</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-F">F</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-fatal-signal">fatal signal</a>:</td><td>&nbsp;</td><td valign="top"><a href="#Bug-Criteria">Bug Criteria</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-file-name">file name</a>:</td><td>&nbsp;</td><td valign="top"><a href="#nm">nm</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-H">H</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-H">H</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-header-information_002c-all">header information, all</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objdump">objdump</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-I">I</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-I">I</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-input-_002edef-file">input .def file</a>:</td><td>&nbsp;</td><td valign="top"><a href="#dlltool">dlltool</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-input-file-name">input file name</a>:</td><td>&nbsp;</td><td valign="top"><a href="#nm">nm</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-Instruction-width">Instruction width</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objdump">objdump</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-L">L</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-L">L</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-libraries">libraries</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar">ar</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-listings-strings">listings strings</a>:</td><td>&nbsp;</td><td valign="top"><a href="#strings">strings</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-LTO-symbol-table">LTO symbol table</a>:</td><td>&nbsp;</td><td valign="top"><a href="#readelf">readelf</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-M">M</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-M">M</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-machine-instructions">machine instructions</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objdump">objdump</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-moving-in-archive">moving in archive</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-MRI-compatibility_002c-ar">MRI compatibility, <code>ar</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-scripts">ar scripts</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-N">N</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-N">N</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-name-duplication-in-archive">name duplication in archive</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-name-length">name length</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar">ar</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-nm">nm</a>:</td><td>&nbsp;</td><td valign="top"><a href="#nm">nm</a></td></tr>
@@ -7339,7 +7263,7 @@ Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="previous"
 <tr><td></td><td valign="top"><a href="#index-nm-format-1"><code>nm</code> format</a>:</td><td>&nbsp;</td><td valign="top"><a href="#nm">nm</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-not-writing-archive-index">not writing archive index</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-O">O</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-O">O</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-objdump">objdump</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objdump">objdump</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-objdump-inlines">objdump inlines</a>:</td><td>&nbsp;</td><td valign="top"><a href="#nm">nm</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-object-code-format">object code format</a>:</td><td>&nbsp;</td><td valign="top"><a href="#nm">nm</a></td></tr>
@@ -7355,17 +7279,17 @@ Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="previous"
 <tr><td></td><td valign="top"><a href="#index-offsets-of-files">offsets of files</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-operations-on-archive">operations on archive</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-P">P</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-P">P</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-plugins">plugins</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-plugins-1">plugins</a>:</td><td>&nbsp;</td><td valign="top"><a href="#nm">nm</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-printing-from-archive">printing from archive</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-printing-strings">printing strings</a>:</td><td>&nbsp;</td><td valign="top"><a href="#strings">strings</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-Q">Q</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-Q">Q</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-quick-append-to-archive">quick append to archive</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-quiet">quiet</a>:</td><td>&nbsp;</td><td valign="top"><a href="#readelf">readelf</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-R">R</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-R">R</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-radix-for-section-sizes">radix for section sizes</a>:</td><td>&nbsp;</td><td valign="top"><a href="#size">size</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-ranlib-1">ranlib</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ranlib">ranlib</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-ranlib">ranlib</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
@@ -7377,7 +7301,7 @@ Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="previous"
 <tr><td></td><td valign="top"><a href="#index-replacement-in-archive">replacement in archive</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-reporting-bugs">reporting bugs</a>:</td><td>&nbsp;</td><td valign="top"><a href="#Reporting-Bugs">Reporting Bugs</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-S">S</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-S">S</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-scripts_002c-ar">scripts, <code>ar</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-scripts">ar scripts</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-section-addresses-in-objdump">section addresses in objdump</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objdump">objdump</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-section-headers">section headers</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objdump">objdump</a></td></tr>
@@ -7411,10 +7335,10 @@ Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="previous"
 <tr><td></td><td valign="top"><a href="#index-symbols">symbols</a>:</td><td>&nbsp;</td><td valign="top"><a href="#nm">nm</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-symbols_002c-discarding">symbols, discarding</a>:</td><td>&nbsp;</td><td valign="top"><a href="#strip">strip</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-T">T</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-T">T</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-thin-archives">thin archives</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar">ar</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-U">U</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-U">U</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-undefined-symbols">undefined symbols</a>:</td><td>&nbsp;</td><td valign="top"><a href="#nm">nm</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-undefined-symbols-1">undefined symbols</a>:</td><td>&nbsp;</td><td valign="top"><a href="#nm">nm</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-Unix-compatibility_002c-ar">Unix compatibility, <code>ar</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
@@ -7422,11 +7346,11 @@ Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="previous"
 <tr><td></td><td valign="top"><a href="#index-Update-ELF-header">Update ELF header</a>:</td><td>&nbsp;</td><td valign="top"><a href="#elfedit">elfedit</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-updating-an-archive">updating an archive</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-V">V</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-V">V</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-version">version</a>:</td><td>&nbsp;</td><td valign="top"><a href="#Top">Top</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-VMA-in-objdump">VMA in objdump</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objdump">objdump</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
-<tr><th><a name="Binutils-Index_cp_letter-W">W</a></th><td></td><td></td></tr>
+<tr><th id="Binutils-Index_cp_letter-W">W</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-wide-output_002c-printing">wide output, printing</a>:</td><td>&nbsp;</td><td valign="top"><a href="#objdump">objdump</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-writing-archive-index">writing archive index</a>:</td><td>&nbsp;</td><td valign="top"><a href="#ar-cmdline">ar cmdline</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
@@ -7482,7 +7406,7 @@ Previous: <a href="#GNU-Free-Documentation-License" accesskey="p" rel="previous"
 <hr>
 <h4 class="footnotes-heading">Footnotes</h4>
 
-<h3><a name="FOOT1" href="#DOCF1">(1)</a></h3>
+<h5><a id="FOOT1" href="#DOCF1">(1)</a></h3>
 <p>MS-DOS does not allow <kbd>+</kbd> characters in file names, so on
 MS-DOS this program is named <code>CXXFILT</code>.</p>
 </div>

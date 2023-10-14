@@ -1,4 +1,4 @@
-This is sframe-spec.info, produced by makeinfo version 5.1 from
+This is sframe-spec.info, produced by makeinfo version 6.7 from
 sframe-spec.texi.
 
 Copyright (C) 2021-2023 Free Software Foundation, Inc.
@@ -107,12 +107,12 @@ Offset   Name                    Description
 0x00     'uint16_t sfp_magic'    The magic number for SFrame section: 0xdee2.  Defined
                                  as a macro 'SFRAME_MAGIC'.
                                  
-0x02     'uint8_t sfp_version'   The version number of this SFrame section.  *Note
-                                 SFrame version::, for the set of valid values.
+0x02     'uint8_t sfp_version'   The version number of this SFrame section.
+                                 *Note SFrame version::, for the set of valid values.
                                  Current version is 'SFRAME_VERSION_1'.
                                  
-0x03     'uint8_t sfp_flags'     Flags (section-wide) for this SFrame section.  *Note
-                                 SFrame flags::, for the set of valid values.
+0x03     'uint8_t sfp_flags'     Flags (section-wide) for this SFrame section.
+                                 *Note SFrame flags::, for the set of valid values.
 
 * Menu:
 
@@ -224,11 +224,11 @@ present.
 
 Offset   Name                               Description
 ----------------------------------------------------------------------------------
-0x00     'sframe_preamble sfh_preamble'     The SFrame preamble.  *Note SFrame
-                                            Preamble::.
+0x00     'sframe_preamble sfh_preamble'     The SFrame preamble.
+                                            *Note SFrame Preamble::.
                                             
-0x04     'uint8_t sfh_abi_arch'             The ABI/arch identifier.  *Note
-                                            SFrame ABI/arch identifier::.
+0x04     'uint8_t sfh_abi_arch'             The ABI/arch identifier.
+                                            *Note SFrame ABI/arch identifier::.
                                             
 0x05     'int8_t sfh_cfa_fixed_fp_offset'   The CFA fixed FP offset, if any.
                                             
@@ -254,9 +254,8 @@ Offset   Name                               Description
                                             array element is of type SFrame
                                             function desciptor entry, each
                                             providing a high-level function
-                                            description for backtracing.  *Note
-                                            SFrame Function Descriptor
-                                            Entries::.
+                                            description for backtracing.
+                                            *Note SFrame Function Descriptor Entries::.
                                             
 0x18     'uint32_t sfh_freoff'              The offset in bytes of the SFrame
                                             FRE sub-section, the core of the
@@ -343,8 +342,8 @@ Offset   Name                                 Description
                                               specifying the total number of
                                               SFrame FREs used for the function.
                                               
-0x10     'uint8_t sfde_func_info'             The SFrame FDE info word.  *Note
-                                              The SFrame FDE info word::.
+0x10     'uint8_t sfde_func_info'             The SFrame FDE info word.
+                                              *Note The SFrame FDE info word::.
                                               
 
 * Menu:
@@ -369,11 +368,10 @@ Bit offset   Name       Description
                         the SFrame FDE. Two possible values: SFRAME_AARCH64_PAUTH_KEY_A
                         (0) or SFRAME_AARCH64_PAUTH_KEY_B (1).
                         
-4            'fdetype'  SFRAME_FDE_TYPE_PCMASK (1) or SFRAME_FDE_TYPE_PCINC (0).  *Note
-                        The SFrame FDE types::.
+4            'fdetype'  SFRAME_FDE_TYPE_PCMASK (1) or SFRAME_FDE_TYPE_PCINC (0).
+                        *Note The SFrame FDE types::.
                         
-0-3          'fretype'  Choice of three SFrame FRE types.  *Note The SFrame FRE
-                        types::.
+0-3          'fretype'  Choice of three SFrame FRE types. *Note The SFrame FRE types::.
 
 
 File: sframe-spec.info,  Node: The SFrame FDE types,  Next: The SFrame FRE types,  Prev: The SFrame FDE info word,  Up: SFrame Function Descriptor Entries
@@ -603,17 +601,22 @@ Node: Top564
 Node: Overview1114
 Node: SFrame section2135
 Node: SFrame Preamble2607
-Node: SFrame endianness3965
-Node: SFrame version4421
-Node: SFrame flags4923
-Node: SFrame Header5643
-Node: SFrame ABI/arch identifier10861
-Node: SFrame Function Descriptor Entries11827
-Node: The SFrame FDE info word14621
-Node: The SFrame FDE types15610
-Node: The SFrame FRE types17178
-Node: SFrame Frame Row Entries18734
-Node: The SFrame FRE info word21131
-Node: Index23075
+Node: SFrame endianness3963
+Node: SFrame version4419
+Node: SFrame flags4921
+Node: SFrame Header5641
+Node: SFrame ABI/arch identifier10812
+Node: SFrame Function Descriptor Entries11778
+Node: The SFrame FDE info word14571
+Node: The SFrame FDE types15534
+Node: The SFrame FRE types17102
+Node: SFrame Frame Row Entries18658
+Node: The SFrame FRE info word21055
+Node: Index22999
 
 End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:

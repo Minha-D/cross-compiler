@@ -1,4 +1,4 @@
-This is cpp.info, produced by makeinfo version 5.1 from cpp.texi.
+This is cpp.info, produced by makeinfo version 6.7 from cpp.texi.
 
 Copyright (C) 1987-2022 Free Software Foundation, Inc.
 
@@ -2895,11 +2895,11 @@ directive": '#if', '#ifdef' or '#ifndef'.
 * Defined::
 * Else::
 * Elif::
-* '__has_attribute'::
-* '__has_cpp_attribute'::
-* '__has_c_attribute'::
-* '__has_builtin'::
-* '__has_include'::
+* __has_attribute::
+* __has_cpp_attribute::
+* __has_c_attribute::
+* __has_builtin::
+* __has_include::
 
 
 File: cpp.info,  Node: Ifdef,  Next: If,  Up: Conditional Syntax
@@ -3088,7 +3088,7 @@ TEXT-IF-FALSE is skipped.  If EXPRESSION is zero, the opposite happens.
    You can use '#else' with '#ifdef' and '#ifndef', too.
 
 
-File: cpp.info,  Node: Elif,  Next: '__has_attribute',  Prev: Else,  Up: Conditional Syntax
+File: cpp.info,  Node: Elif,  Next: __has_attribute,  Prev: Else,  Up: Conditional Syntax
 
 4.2.5 Elif
 ----------
@@ -3133,7 +3133,7 @@ within it have failed.
 '#elif' may not follow '#else'.
 
 
-File: cpp.info,  Node: '__has_attribute',  Next: '__has_cpp_attribute',  Prev: Elif,  Up: Conditional Syntax
+File: cpp.info,  Node: __has_attribute,  Next: __has_cpp_attribute,  Prev: Elif,  Up: Conditional Syntax
 
 4.2.6 '__has_attribute'
 -----------------------
@@ -3169,7 +3169,7 @@ operator but not with others that don't.
      #endif
 
 
-File: cpp.info,  Node: '__has_cpp_attribute',  Next: '__has_c_attribute',  Prev: '__has_attribute',  Up: Conditional Syntax
+File: cpp.info,  Node: __has_cpp_attribute,  Next: __has_c_attribute,  Prev: __has_attribute,  Up: Conditional Syntax
 
 4.2.7 '__has_cpp_attribute'
 ---------------------------
@@ -3186,7 +3186,7 @@ current standard attributes, see
 SD-6: SG10 Feature Test Recommendations (https://isocpp.org/std/standing-documents/sd-6-sg10-feature-test-recommendations/).
 
 
-File: cpp.info,  Node: '__has_c_attribute',  Next: '__has_builtin',  Prev: '__has_cpp_attribute',  Up: Conditional Syntax
+File: cpp.info,  Node: __has_c_attribute,  Next: __has_builtin,  Prev: __has_cpp_attribute,  Up: Conditional Syntax
 
 4.2.8 '__has_c_attribute'
 -------------------------
@@ -3202,7 +3202,7 @@ introduced into the C standard, or when the syntax of operands to the
 attribute was extended in the C standard.
 
 
-File: cpp.info,  Node: '__has_builtin',  Next: '__has_include',  Prev: '__has_c_attribute',  Up: Conditional Syntax
+File: cpp.info,  Node: __has_builtin,  Next: __has_include,  Prev: __has_c_attribute,  Up: Conditional Syntax
 
 4.2.9 '__has_builtin'
 ---------------------
@@ -3228,7 +3228,7 @@ portable code.  Thus, the recommended use of the operator is as follows:
      #endif
 
 
-File: cpp.info,  Node: '__has_include',  Prev: '__has_builtin',  Up: Conditional Syntax
+File: cpp.info,  Node: __has_include,  Prev: __has_builtin,  Up: Conditional Syntax
 
 4.2.10 '__has_include'
 ----------------------
@@ -5316,7 +5316,7 @@ without any initial '-' or '--'.
 * d:                                     Invocation.          (line 408)
 * dD:                                    Invocation.          (line 427)
 * DEPENDENCIES_OUTPUT:                   Environment Variables.
-                                                              (line  44)
+                                                              (line  45)
 * dI:                                    Invocation.          (line 437)
 * dM:                                    Invocation.          (line 416)
 * dN:                                    Invocation.          (line 433)
@@ -5367,9 +5367,9 @@ without any initial '-' or '--'.
 * pthread:                               Invocation.          (line  96)
 * remap:                                 Invocation.          (line 397)
 * SOURCE_DATE_EPOCH:                     Environment Variables.
-                                                              (line  66)
+                                                              (line  67)
 * SUNPRO_DEPENDENCIES:                   Environment Variables.
-                                                              (line  60)
+                                                              (line  61)
 * traditional:                           Invocation.          (line 379)
 * traditional-cpp:                       Invocation.          (line 379)
 * trigraphs:                             Invocation.          (line 388)
@@ -5394,15 +5394,14 @@ Concept Index
  [index ]
 * Menu:
 
-* '#' operator:                          Stringizing.         (line   6)
-* '##' operator:                         Concatenation.       (line   6)
-* '_Pragma':                             Pragmas.             (line  13)
-* '__has_attribute':                     '__has_attribute'.   (line   6)
-* '__has_builtin':                       '__has_builtin'.     (line   6)
-* '__has_cpp_attribute':                 '__has_cpp_attribute'.
-                                                              (line   6)
-* '__has_c_attribute':                   '__has_c_attribute'. (line   6)
-* '__has_include':                       '__has_include'.     (line   6)
+* # operator:                            Stringizing.         (line   6)
+* ## operator:                           Concatenation.       (line   6)
+* _Pragma:                               Pragmas.             (line  13)
+* __has_attribute:                       __has_attribute.     (line   6)
+* __has_builtin:                         __has_builtin.       (line   6)
+* __has_cpp_attribute:                   __has_cpp_attribute. (line   6)
+* __has_c_attribute:                     __has_c_attribute.   (line   6)
+* __has_include:                         __has_include.       (line   6)
 * alternative tokens:                    Tokenization.        (line 100)
 * arguments:                             Macro Arguments.     (line   6)
 * arguments in macro definitions:        Macro Arguments.     (line   6)
@@ -5427,12 +5426,12 @@ Concept Index
 * conditionals:                          Conditionals.        (line   6)
 * continued lines:                       Initial processing.  (line  61)
 * controlling macro:                     Once-Only Headers.   (line  35)
-* 'defined':                             Defined.             (line   6)
+* defined:                               Defined.             (line   6)
 * dependencies for make as output:       Environment Variables.
-                                                              (line  45)
+                                                              (line  46)
 * dependencies for make as output <1>:   Environment Variables.
-                                                              (line  61)
-* dependencies, 'make':                  Invocation.          (line 103)
+                                                              (line  62)
+* dependencies, make:                    Invocation.          (line 103)
 * diagnostic:                            Diagnostics.         (line   6)
 * digraphs:                              Tokenization.        (line 100)
 * directive line:                        The preprocessing language.
@@ -5460,7 +5459,7 @@ Concept Index
                                                               (line   6)
 * including just once:                   Once-Only Headers.   (line   6)
 * invocation:                            Invocation.          (line   6)
-* 'iso646.h':                            C++ Named Operators. (line   6)
+* iso646.h:                              C++ Named Operators. (line   6)
 * line comments:                         Initial processing.  (line  77)
 * line control:                          Line Control.        (line   6)
 * line endings:                          Initial processing.  (line  14)
@@ -5471,7 +5470,7 @@ Concept Index
 * macros in include:                     Computed Includes.   (line   6)
 * macros with arguments:                 Macro Arguments.     (line   6)
 * macros with variable arguments:        Variadic Macros.     (line   6)
-* 'make':                                Invocation.          (line 103)
+* make:                                  Invocation.          (line 103)
 * manifest constants:                    Object-like Macros.  (line   6)
 * named operators:                       C++ Named Operators. (line   6)
 * newlines in macro arguments:           Newlines in Arguments.
@@ -5534,7 +5533,7 @@ Concept Index
                                                               (line   6)
 * variable number of arguments:          Variadic Macros.     (line   6)
 * variadic macros:                       Variadic Macros.     (line   6)
-* wrapper '#ifndef':                     Once-Only Headers.   (line   6)
+* wrapper #ifndef:                       Once-Only Headers.   (line   6)
 * wrapper headers:                       Wrapper Headers.     (line   6)
 
 
@@ -5583,40 +5582,45 @@ Node: Newlines in Arguments113581
 Node: Conditionals114532
 Node: Conditional Uses116228
 Node: Conditional Syntax117586
-Node: Ifdef118018
-Node: If121175
-Node: Defined123479
-Node: Else124872
-Node: Elif125442
-Node: '__has_attribute'126757
-Node: '__has_cpp_attribute'128355
-Node: '__has_c_attribute'129251
-Node: '__has_builtin'130030
-Node: '__has_include'131169
-Node: Deleted Code132762
-Node: Diagnostics134009
-Node: Line Control135558
-Node: Pragmas137836
-Node: Other Directives142233
-Node: Preprocessor Output143283
-Node: Traditional Mode146436
-Node: Traditional lexical analysis147573
-Node: Traditional macros150076
-Node: Traditional miscellany153873
-Node: Traditional warnings154869
-Node: Implementation Details157066
-Node: Implementation-defined behavior157629
-Ref: Identifier characters158379
-Node: Implementation limits161428
-Node: Obsolete Features164101
-Node: Invocation166945
-Ref: dashMF172980
-Ref: fdollars-in-identifiers177642
-Ref: Wtrigraphs191888
-Node: Environment Variables193943
-Node: GNU Free Documentation License197634
-Node: Index of Directives222780
-Node: Option Index224933
-Node: Concept Index231035
+Node: Ifdef118008
+Node: If121165
+Node: Defined123469
+Node: Else124862
+Node: Elif125432
+Node: __has_attribute126745
+Node: __has_cpp_attribute128339
+Node: __has_c_attribute129229
+Node: __has_builtin130002
+Node: __has_include131135
+Node: Deleted Code132724
+Node: Diagnostics133971
+Node: Line Control135520
+Node: Pragmas137798
+Node: Other Directives142195
+Node: Preprocessor Output143245
+Node: Traditional Mode146398
+Node: Traditional lexical analysis147535
+Node: Traditional macros150038
+Node: Traditional miscellany153835
+Node: Traditional warnings154831
+Node: Implementation Details157028
+Node: Implementation-defined behavior157591
+Ref: Identifier characters158341
+Node: Implementation limits161390
+Node: Obsolete Features164063
+Node: Invocation166907
+Ref: dashMF172942
+Ref: fdollars-in-identifiers177604
+Ref: Wtrigraphs191850
+Node: Environment Variables193905
+Node: GNU Free Documentation License197596
+Node: Index of Directives222743
+Node: Option Index224896
+Node: Concept Index230998
 
 End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:

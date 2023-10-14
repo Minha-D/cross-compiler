@@ -1,4 +1,4 @@
-This is gprof.info, produced by makeinfo version 5.1 from gprof.texi.
+This is gprof.info, produced by makeinfo version 6.7 from gprof.texi.
 
 This file documents the gprof profiler of the GNU system.
 
@@ -27,8 +27,7 @@ to determine which parts of a program are taking most of the execution
 time.  We assume that you know how to write, compile, and execute
 programs.  GNU 'gprof' was written by Jay Fenlason.
 
-   This manual is for 'gprof' (Arm GNU Toolchain 12.3.Rel1 (Build
-arm-12.35)) version 2.40.0.
+   This manual is for 'gprof' (Linaro_Binutils-2023.06) version 2.40.0.
 
    This document is distributed under the terms of the GNU Free
 Documentation License version 1.3.  A copy of the license is included in
@@ -440,6 +439,7 @@ which prints a flat profile and call graph analysis for all functions.
           c-decl.o:00000000 T print_lang_identifier
           c-decl.o:00000000 T print_lang_type
           ...
+
 
      To create a MAP_FILE with GNU 'nm', type a command like 'nm
      --extern-only --defined-only -v --print-file-name program-name'.
@@ -1246,6 +1246,7 @@ profiling.  Note that 'ct_init' accounted for four histogram hits, and
                      0.00    0.00   13327/13496       ct_init
      [7]      0.0    0.00    0.00   13496         init_block
 
+
    Now let's look at some of 'gprof''s output from the same program run,
 this time with line-by-line profiling enabled.  Note that 'ct_init''s
 four histogram hits are broken down into four lines of source code--one
@@ -1285,6 +1286,7 @@ one call from line 396, 3071 calls from line 384, 3730 calls from line
                  0.00    0.00    3730/13496       ct_init (trees.c:385)
                  0.00    0.00    6525/13496       ct_init (trees.c:387)
      [6]  0.0    0.00    0.00   13496         init_block (trees.c:408)
+
 
 
 File: gprof.info,  Node: Annotated Source,  Prev: Line-by-line,  Up: Output
@@ -1326,6 +1328,7 @@ line numbers added:
      17     crc = c;
      18     return c ^ 0xffffffffL;
      19 }
+
 
    'updcrc' has at least five basic-blocks.  One is the function itself.
 The 'if' statement on line 9 generates two more basic-blocks, one for
@@ -2426,34 +2429,39 @@ their use in free software.
 
 Tag Table:
 Node: Top719
-Node: Introduction2077
-Node: Compiling4568
-Node: Executing8624
-Node: Invoking11517
-Node: Output Options12932
-Node: Analysis Options20099
-Node: Miscellaneous Options24019
-Node: Deprecated Options25273
-Node: Symspecs27336
-Node: Output29162
-Node: Flat Profile30202
-Node: Call Graph35155
-Node: Primary38387
-Node: Callers40975
-Node: Subroutines43093
-Node: Cycles44934
-Node: Line-by-line51711
-Node: Annotated Source55785
-Node: Inaccuracy58782
-Node: Sampling Error59040
-Node: Assumptions61944
-Node: How do I?63414
-Node: Incompatibilities64971
-Node: Details66465
-Node: Implementation66858
-Node: File Format72757
-Node: Internals77049
-Node: Debugging85539
-Node: GNU Free Documentation License87129
+Node: Introduction2055
+Node: Compiling4546
+Node: Executing8602
+Node: Invoking11495
+Node: Output Options12910
+Node: Analysis Options20078
+Node: Miscellaneous Options23998
+Node: Deprecated Options25252
+Node: Symspecs27315
+Node: Output29141
+Node: Flat Profile30181
+Node: Call Graph35134
+Node: Primary38366
+Node: Callers40954
+Node: Subroutines43072
+Node: Cycles44913
+Node: Line-by-line51690
+Node: Annotated Source55766
+Node: Inaccuracy58764
+Node: Sampling Error59022
+Node: Assumptions61926
+Node: How do I?63396
+Node: Incompatibilities64953
+Node: Details66447
+Node: Implementation66840
+Node: File Format72739
+Node: Internals77031
+Node: Debugging85521
+Node: GNU Free Documentation License87111
 
 End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:
